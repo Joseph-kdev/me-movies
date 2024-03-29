@@ -1,0 +1,14 @@
+/* movie lists */
+#movie-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  @media (min-width:600px) {
+    #movie-list ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  

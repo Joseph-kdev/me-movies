@@ -1,0 +1,52 @@
+/* carousel styles */
+.poster {
+}
+.poster img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+.mySwiper {
+  min-height: 100vh;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.425);
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  
+}
+/* movie details on carousel */
+.movie-details {
+  position: absolute;
+  bottom: 10vh;
+  left: 3vw;
+  max-width: 600px;
+  padding-left: 2%;
+  padding-right: 2%;
+  z-index: 10;
+}
+.movie-details h1 {
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+.overview {
+  color: white;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  font-size: 1em;
+}
+.rate {
+  display: flex;
+  align-items: center;
+}
+.rate svg{
+  margin-right: 10px;
+}
+.rate p {
+  font-weight: bold;
+  color: white;
+}
