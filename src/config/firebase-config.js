@@ -5,7 +5,7 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth"
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDdmjeDkwcr3lo24YtwXUeukJNIfWWfb-g",
+  apiKey: import.meta.env.VITE_FIREBASE_KEY,
   authDomain: "me-movies-5bf6c.firebaseapp.com",
   projectId: "me-movies-5bf6c",
   storageBucket: "me-movies-5bf6c.appspot.com",

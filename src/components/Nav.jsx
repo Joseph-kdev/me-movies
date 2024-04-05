@@ -37,20 +37,25 @@ export const Nav = () => {
         </div>
         <ul className={`navbar-menu ${isOpen ? 'open' : ''}`}>
           <li className="navbar-item">
+              <Link to="/search" className="navbar-link">
+                Search
+              </Link>
+          </li>
+          <li className="navbar-item">
               <Link to="/home" className="navbar-link">Home</Link>
           </li>
           <li className="navbar-item">
               <Link to="/collections" className="navbar-link">Your Catalogue</Link>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">
+            <Link to="/movies" className="navbar-link">
               Movies
-            </a>
+            </Link>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">
+            <Link to="/tvshows" className="navbar-link">
               TV shows
-            </a>
+            </Link>
           </li>
           <li className="navbar-item">
             <a href="#" className="navbar-link" onClick={logout}>

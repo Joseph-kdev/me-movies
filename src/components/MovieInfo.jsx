@@ -10,7 +10,6 @@ export const MovieInfo = () => {
     const { id } = useParams()
     const baseUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=videos,credits`
     const imgUrl = 'https://image.tmdb.org/t/p/w500/'
-
     
     //use movie id to return movie details from TMDB
     const getMovieInfo = async() => {
@@ -35,9 +34,9 @@ export const MovieInfo = () => {
 
     const topActors = movie.credits.cast.slice(0,8)
 
-    const officialTrailer = movie.videos.results.find(trailer => trailer.name === 'Official Trailer')
-    console.log(officialTrailer);
-    
+    // const officialTrailer = movie.videos.results.find(trailer => trailer.name === 'Official Trailer')
+
+    const officialTrailer = movie.videos.results[0]
 
   return (
     <>
@@ -91,6 +90,7 @@ export const MovieInfo = () => {
       </div>
       <div className='movie-trailer'>
           <h2>Trailer</h2>
+          {  movie.videos.results.length != 0 ? (
           <div className='trailer-video'>
                 <iframe
                   width="400"
@@ -102,6 +102,11 @@ export const MovieInfo = () => {
                   className='trailer'
                 />
           </div>
+          ) : 
+          <div>
+            <h3>No trailer available</h3>
+          </div>
+          }
       </div>
     </>
   )

@@ -1,0 +1,33 @@
+.search {
+    background-color: pink;
+    height: 100vh;
+    border: solid black;
+}
+.search-bar {
+    margin-top: 15vh;
+    height: 6vh;
+    display: flex;
+}
+form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-box {
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: solid white;
+}
+.search-container hr {
+    margin: 1vh 12px;
+}
+.search-heading, .search-holding {
+    margin: 2vh 12px;
+    font-size: 20px;
+}
