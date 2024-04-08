@@ -1,10 +1,9 @@
 .search {
     background-color: pink;
     height: 100vh;
-    border: solid black;
 }
 .search-bar {
-    margin-top: 15vh;
+    padding-top: 15vh;
     height: 6vh;
     display: flex;
 }

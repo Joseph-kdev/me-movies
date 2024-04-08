@@ -84,7 +84,7 @@ export const Movies = () => {
 
 
   return (
-    <div>
+    <div className='movies-filter'>
       <Nav />
       <h2>Movies</h2>
       < FilterComponent genres={genres} mediaType='movie'/>

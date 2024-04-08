@@ -1,7 +1,7 @@
 import React from 'react'
 import FilterComponent from './FilterComponent'
 import { Nav } from './Nav'
-
+import './stylesheets/categories.css'
 export const TvShows = () => {
     const tvGenres = [
           {
@@ -71,7 +71,7 @@ export const TvShows = () => {
         ]
 
   return (
-    <div>
+    <div className='movies-filter'>
         <Nav />
         <h2>
           Tv shows

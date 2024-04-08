@@ -1,6 +1,6 @@
 import './App.css'
-import Login from './components/Login'
 import { Route, Routes, Navigate } from 'react-router-dom'
+import Login from './components/Login'
 import Home from './components/Home'
 import { Landing } from './components/Landing'
 import { useUserAuth } from './UserAuthContext'
@@ -23,7 +23,7 @@ const { user } = useUserAuth()
         <Route path='/home' element={user ? <Home /> : <Navigate to="/login" /> } />
         <Route path='/login' element={ <Login /> } />
         <Route path='/collections' element={ user ? <UserCollections /> : <Navigate to="/login" /> } />
-        <Route path='/movie/:id' element={ user ? <MovieInfo /> :  <Navigate to="/login" /> } />
+        <Route path='/:type/:id' element={ user ? <MovieInfo /> :  <Navigate to="/login" /> } />
         <Route path='/search' element={ user ? <Search /> :  <Navigate to="/login" /> } />
         <Route path='/movies' element={ user ? <Movies /> :  <Navigate to="/login" /> } />
         <Route path='/tvshows' element={ user ? <TvShows /> :  <Navigate to="/login" /> } />

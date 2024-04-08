@@ -7,8 +7,8 @@ import './stylesheets/MovieInfo.css'
 export const MovieInfo = () => {
   const API_KEY = import.meta.env.VITE_API_KEY
     //grab movie id from url
-    const { id } = useParams()
-    const baseUrl = `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&append_to_response=videos,credits`
+    const { id, type } = useParams()
+    const baseUrl = `https://api.themoviedb.org/3/${type}/${id}?api_key=${API_KEY}&append_to_response=videos,credits`
     const imgUrl = 'https://image.tmdb.org/t/p/w500/'
     
     //use movie id to return movie details from TMDB

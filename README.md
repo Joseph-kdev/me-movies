@@ -8,9 +8,9 @@
 - Home page with :
   - Style up a bit
   - Editors choice section: carousel ✔️
-  - Genre collection: switchable tabs
+  - Multiple sections: Trending, upcoming
   - Caching: react query :check
-  - movies/tv shows links
+  - movies/tv shows links ✔️
   - Profile button
   - sign out functionality ✔️
   - Button guide
@@ -29,9 +29,8 @@
   - search bar ✔️
   - search functionality ✔️
   - styling
-- Movies page
-  - filter component
-  - 
+- Movies/tv shows pages
+  - filter component ✔️
 
 ## Design requirements
 

@@ -41,9 +41,9 @@ const Login = () => {
         <section id="login-page">
             <div id="login-contents">
             <div id="intro">
-                <h2>
-                    Me-Movies
-                </h2>
+                <div className="me-logo">
+                    <img src="/assets/Me Movies.svg" alt="" className="logo" />
+                </div>
                 <p>
                     Tired of losing track of what you're binge-watching? Let's fix that for you.
                     Join <span>Me-Movies</span>
@@ -64,9 +64,6 @@ const Login = () => {
                 <p>{isSignUp ? 'Already have an account? ' : 'Don\'t have an account? '}
                     <button onClick={toggleMode} className="sign">{isSignUp ? "Login" : "Sign Up"}</button>
                 </p>
-                <button onClick={logOut} className="sign">
-                    Sign Out
-                </button>
                 </div>
             </div>
             </div>

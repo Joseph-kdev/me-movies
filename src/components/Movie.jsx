@@ -6,7 +6,7 @@ import { db } from "../config/firebase-config";
 import { useQueryClient } from "@tanstack/react-query"; 
 import './stylesheets/moviecard.css'
 
-export const Movie = ({ id, title, overview, poster_path, vote_average, release_date }) => {
+export const Movie = ({ id, title, overview, poster_path, vote_average, release_date, type }) => {
     const imgUrl = 'https://image.tmdb.org/t/p/w500/';
     const { user } = useUserAuth();
     const queryClient = useQueryClient(); // Initialize useQueryClient hook
@@ -58,7 +58,8 @@ export const Movie = ({ id, title, overview, poster_path, vote_average, release_
                         overview,
                         poster_path,
                         vote_average,
-                        release_date
+                        release_date,
+                        type
                     });
                     console.log(`${title} added to ${listType}`);
                     setMovieInCollections(prevState => ({
@@ -109,6 +110,7 @@ export const Movie = ({ id, title, overview, poster_path, vote_average, release_
             poster_path,
             vote_average,
             release_date,
+            type,
           });
       
           // Update the movieInCollections state
@@ -217,7 +219,7 @@ export const Movie = ({ id, title, overview, poster_path, vote_average, release_
                 )}
 
                 <div className="more">
-                    <Link to={`/movie/${id}`}>
+                    <Link to={`/${type}/${id}`}>
                         <button>More</button>
                     </Link>
                 </div>

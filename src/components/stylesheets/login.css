@@ -6,6 +6,9 @@
     flex-flow: column;
     align-items: center;
   }
+  .me-logo {
+    margin-bottom: 15px;
+  }
   #login-contents {
     border: black solid;
     margin-top: 26vh;

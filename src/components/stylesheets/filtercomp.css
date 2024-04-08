@@ -1,0 +1,38 @@
+.genre-collection, .pagination {
+    margin: 1vh 10px;
+}
+.genre-collection h3 {
+    margin:1vh 0;
+}
+.genre {
+    margin: 1vh 0px;
+    margin-right: 2vw;
+    height: 1.5rem;
+    box-shadow: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pag-buttons, .pag-page {
+    margin: 1vh 4vw;
+}
+.pag-page {
+    border: solid purple;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
