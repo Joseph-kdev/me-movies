@@ -1,6 +1,14 @@
 /* Login styles */
+:root {
+  --text: #040316;
+  --background: #f5f5f5;
+  --primary: #0033cc;
+  --secondary: #ffcc00;
+  --accent: #333333;
+}
+
 #login-page {
-    background-color: pink;
+    background-image: url('/assets/collage1.jpg');
     min-height: 100vh;
     display: flex;
     flex-flow: column;
@@ -10,19 +18,26 @@
     margin-bottom: 15px;
   }
   #login-contents {
-    border: black solid;
-    margin-top: 26vh;
+    margin-top: 24vh;
     padding-top: 2vh;
     padding-bottom: 2vh;
     max-width: 438px;
-    background-color: rgba(255,255,255,0.5);
+    color: var(--text);
+    background-color: rgba(213, 214, 252, 0.897);
   }
   #intro {
     text-align: center;
-    
-    margin-bottom: 4vh;
+    margin-bottom: 2vh;
   }
-  #login{
+  #intro p {
+    font-family: "Tilt Neon";
+    line-height: 1.4;
+    padding: 0 8px;
+  }
+  #login {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 400;
+    font-style: normal;
   }
   #login div {
     display: flex;
@@ -30,9 +45,12 @@
     align-items: center;
   }
   #google-button {
+    font-family: "Rowdies", sans-serif;
     margin-top: 1vh;
     margin-bottom: 1vh;
     height: 25px;
+    color: rgb(224, 224, 224);
+    background-color: var(--accent);
   }
   #login-form {
     display: flex;
@@ -43,16 +61,84 @@
     margin-top: 1.5vh;
     height: 3.5vh;
     width: 55%;
+    padding-left: 5px;
+  }
+  input :focus{
+    border: solid var(--accent);
   }
   #login-form button {
     margin-top: 1vh;
+    margin-bottom: 1vh;
     height: 24px;
+    background-color: var(--accent);
+    color: white;
+    font-family: "Rowdies", sans-serif;
   }
+  
   .sign {
     height: 24px;
+    background-color: var(--secondary);
+    color: var(--text);
+    
   }
   #login div p {
     margin-top: 1vh;
     margin-bottom: 1vh;
   }
-  
+  button {
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/* logo animation */
+.me-movies {
+  margin-left: 5px;
+  animation-name: fontChange;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fontChange {
+  0% {
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary);
+  }
+  20% {
+    font-family: "Agbalumo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--accent);
+  }
+  40% {
+    font-family: "Kablammo", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text);
+  }
+  60% {
+    font-family: "Workbench", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--primary);
+  }
+  80% {
+    font-family: "Rubik Gemstones", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  } 
+  100% {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--accent);
+  }
+}

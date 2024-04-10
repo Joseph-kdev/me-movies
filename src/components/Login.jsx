@@ -33,10 +33,6 @@ const Login = () => {
         setIsSignUp(prevState => !prevState)
     }
 
-    function logOut() {
-        return signOut(auth);
-    }
-
     return ( 
         <section id="login-page">
             <div id="login-contents">
@@ -45,16 +41,18 @@ const Login = () => {
                     <img src="/assets/Me Movies.svg" alt="" className="logo" />
                 </div>
                 <p>
-                    Tired of losing track of what you're binge-watching? Let's fix that for you.
-                    Join <span>Me-Movies</span>
+                    Tired of losing track of what you're watching? Can't find your watchlist?
+                    Don't have a clue what your favorite shows are any more? <br />
+                    Let's fix that. <br />
+                    Join <span className="me-movies">Me-Movies</span>
                 </p>
             </div>
             <div id="login">
                 <form onSubmit={handleLogin} id="login-form">
-                <input type="text" placeholder="email" 
+                <input type="text" placeholder="enter email" 
                     onChange={(e) => setName(e.target.value)}
                 />
-                <input type="password" placeholder="password" 
+                <input type="password" placeholder="add password  :)" 
                     onChange={e => setPassword(e.target.value)}    
                 />
                 <button type="submit">{isSignUp ? "Sign Up" : "Login"}</button>
