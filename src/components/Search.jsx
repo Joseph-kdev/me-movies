@@ -11,7 +11,7 @@ export const Search = () => {
     const baseUrl = `https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEY}`
     
 
-    const debouncedSearch = useDebounce(searchQuery, 2000)
+    const debouncedSearch = useDebounce(searchQuery, 1000)
 
     const searchOnline = async() => {
         const response = await axios.get(`${baseUrl}&query=${searchQuery}`)
@@ -33,9 +33,10 @@ export const Search = () => {
   return (
     <div className='search'>
         <Nav />
+        <h2 className='search-head'>Search</h2>
         <div className='search-bar'>
             <form>
-                <input type="text" className='search-box' onChange={(event) => setSearchQuery(event.target.value)} value={searchQuery}/>
+                <input type="text" className='search-box' onChange={(event) => setSearchQuery(event.target.value)} value={searchQuery} placeholder="enter movie/show name ; )"/>
             </form>
         </div>
         {searchQuery != '' ? (

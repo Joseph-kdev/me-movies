@@ -9,6 +9,7 @@ import { useQueries } from '@tanstack/react-query';
 import './stylesheets/carousel.css'
 
 
+
 export const Carousel = () => {
   const API_KEY = import.meta.env.VITE_API_KEY
   const images = [

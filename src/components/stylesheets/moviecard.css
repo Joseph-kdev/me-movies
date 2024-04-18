@@ -20,10 +20,10 @@ body {
   .movie-poster {
     position: relative;
     max-width: 175px;
-    height: 275px;
+    height: 280px;
     border: solid transparent;
-    font-family: "Manrope", sans-serif;
-    font-optical-sizing: auto;
+    font-family: "source sans 3", sans-serif;
+ 
   }
   .topRow {
     display: flex;
@@ -34,14 +34,16 @@ body {
     left: 0;
     width: 171px;
     background-color: var(--primary);
-    min-height: 40px;
+    min-height: 35px;
   }
   .topRow div h3 {
+    font-family: 'source sans 3';
+    font-size: 16px;
     color: var(--text);
   }
 .title {
-  margin-left: 8px;
-  margin-right: 4px;
+  margin-right: 2px;
+  margin-left: 4px;
 }
 
 
@@ -89,7 +91,6 @@ body {
 .movie-overview p {
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
-  
 }
 .movie-overview h3 {
   margin: 4px 0;

@@ -1,0 +1,16 @@
+.collection-heading {
+    padding-top: 12vh;
+    font-family: 'tilt neon';
+    color: var(--accent);
+    margin: 1vh 16px;
+    font-size: 2rem;
+}
+.tab {
+    margin: 1vh 16px;
+}
+.tab-heading {
+    background-color: var(--primary);
+    margin: 2vh 0;
+    color: var(--accent);
+    font-family: 'source sans 3';
+}

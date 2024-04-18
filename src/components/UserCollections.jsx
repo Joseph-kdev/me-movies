@@ -7,6 +7,7 @@ import { Tab, TabList, TabPanel, Tabs } from 'react-tabs'
 import 'react-tabs/style/react-tabs.css';
 import { MovieList } from './movieList'
 import { Nav } from './Nav'
+import './stylesheets/collections.css'
 
 
 export const UserCollections = () => {
@@ -47,16 +48,12 @@ export const UserCollections = () => {
     return <div>You messed up somewhere</div>
   }
 
-
-  console.log(favorites);
-  console.log(watched);
-  console.log(watchlist);
-
   return (
     <>
-    <h2>Your Collection</h2>
-      <Tabs>
-        <TabList>
+    <Nav />
+    <h2 className='collection-heading'>Your Collection</h2>
+      <Tabs className='tab'>
+        <TabList className='tab-heading'>
           <Tab>Favorites</Tab>
           <Tab>Watchlist</Tab>
           <Tab>Watched</Tab>

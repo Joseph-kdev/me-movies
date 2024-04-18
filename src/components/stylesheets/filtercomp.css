@@ -1,20 +1,26 @@
 .genre-collection, .pagination {
-    margin: 1vh 10px;
+    margin: 1vh 16px;
 }
 .genre-collection h3 {
     margin:1vh 0;
+    font-family: 'tilt neon';
+    color: var(--text);
 }
 .genre {
     margin: 1vh 0px;
     margin-right: 2vw;
-    height: 1.5rem;
+    height: 1.8rem;
     box-shadow: none;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+    font-family: 'source sans 3';
+    font-weight: 600;
+    
 }
+
 .pagination {
     display: flex;
     justify-content: center;
@@ -23,10 +29,17 @@
 .pag-buttons, .pag-page {
     margin: 1vh 4vw;
 }
+.pag-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent);
+}
 .pag-page {
-    border: solid purple;
-    width: 24px;
-    height: 24px;
+    background-color: var(--primary);
+    width: 28px;
+    height: 28px;
+    color: var(--text);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,4 +48,12 @@
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+}
+@media (min-width:768px) {
+    .genre-collection {
+        text-align: center;
+    }
+    .genre-collection h3 {
+        text-align: left;
+    }
 }

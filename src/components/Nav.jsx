@@ -51,9 +51,9 @@ export const Nav = () => {
             </Link>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link" onClick={logout}>
+            <Link to="/login" className="navbar-link" onClick={logout}>
               Sign Out
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

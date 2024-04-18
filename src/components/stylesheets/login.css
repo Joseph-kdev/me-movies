@@ -15,7 +15,7 @@
     padding-bottom: 2vh;
     max-width: 438px;
     color: var(--text);
-    background-color: rgba(213, 214, 252, 0.897);
+    background-color: var(--primary);
   }
   #intro {
     text-align: center;
@@ -40,8 +40,8 @@
     margin-top: 1vh;
     margin-bottom: 1vh;
     height: 25px;
-    color: rgb(224, 224, 224);
-    background-color: var(--accent);
+    color: #040316;
+    background-color: var(--secondary);
   }
   #login-form {
     display: flex;
@@ -61,14 +61,14 @@
     margin-top: 1vh;
     margin-bottom: 1vh;
     height: 24px;
-    background-color: var(--accent);
-    color: white;
+    background-color: var(--secondary);
+    color: #040316;
   }
   
   .sign {
     height: 24px;
-    background-color: var(--secondary);
-    color: var(--text);
+    background-color: var(--accent);
+    color: #040316;
     
   }
   #login div p {
@@ -98,7 +98,7 @@
     font-family: "Protest Revolution", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: var(--primary);
+    color: var(--secondary);
   }
   20% {
     font-family: "Agbalumo", system-ui;
@@ -118,7 +118,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    color: var(--primary);
+    color: var(--secondary);
   }
   80% {
     font-family: "Rubik Gemstones", system-ui;

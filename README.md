@@ -3,28 +3,27 @@
 - Login page:
   - 2 pages: sign up/login ✔️
   - context api ✔️
-  - grand styling
-  - local-storage
+  - grand styling ✔️
 - Home page with :
-  - Style up a bit
+  - Style up a bit ✔️
   - Editors choice section: carousel ✔️
-  - Multiple sections: Trending, upcoming 1/2 ✔️
-  - Caching: react query :check
+  - Multiple sections: Trending, upcoming 1/2 
+  - Caching: react query :check ??
   - movies/tv shows links ✔️
-  - Profile button
+  - Profile button ??
   - sign out functionality ✔️
-  - Button guide
+  - Button guide ??
 - User profile page
   - 3 collections on switchable tabs ✔️
-  - Styling
+  - Styling ✔️
   - Possible spaghetti code refactor.. ✔️
-  - Relevant statistics?
+  - Relevant statistics??
   - Moving from watchlist to watched functionality ✔️
 - Movie info page
   - movie trailer ✔️
   - movie description ✔️
   - where to watch??
-  - style up
+  - style up 
 - search page
   - search bar ✔️
   - search functionality ✔️
