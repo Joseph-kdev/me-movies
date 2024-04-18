@@ -8,7 +8,7 @@
 - Home page with :
   - Style up a bit
   - Editors choice section: carousel ✔️
-  - Multiple sections: Trending, upcoming
+  - Multiple sections: Trending, upcoming 1/2 ✔️
   - Caching: react query :check
   - movies/tv shows links ✔️
   - Profile button

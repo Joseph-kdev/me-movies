@@ -3,14 +3,14 @@
   padding: 0;
 }
 
-:root[data-theme="light"] {
+/* :root[data-theme="light"] {
   --text: #040316;
   --background: #f5f5f5;
   --primary: #0033cc;
   --secondary: #ffcc00;
   --accent: #333333;
-}
-:root[data-theme="dark"] {
+} */
+:root {
   --text: #eae9fc;
   --background: #0a0a0a;
   --primary: #3366ff;

@@ -1,0 +1,8 @@
+.trending-heading {
+    padding: 2vh 10px;
+    font-family: "Tilt Neon";
+    color: var(--text);
+}
+hr {
+    margin: 0 10px;
+}

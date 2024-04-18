@@ -5,7 +5,7 @@
     right: 0;
     background-color: transparent;
     z-index: 999;
-    width: 100vw;
+    max-width: 100vw;
   }
   
   .navbar-wrapper {
@@ -26,14 +26,17 @@
     margin: 0;
     padding: 0;
     font-size: 1.9em;
+   background-color: var(--primary);
+    
+    min-width: 100%;
   }
   
   @media (max-width: 768px) {
     .navbar-menu {
       flex-direction: column;
-      width: 100%;
+      max-width: 100%;
       position: absolute;
-      top: 90px;
+      top: 99px;
       left: 0;
       padding: 1rem;
       transform: translateX(-100%);
@@ -85,7 +88,8 @@
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    background-color: #fff;
+    background-color: var(--accent);
+    opacity: 0.8;
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -104,4 +108,9 @@
   
   .hamburger-line.open:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+  }
+  @media (min-width: 768px) {
+    .navbar-menu {
+      background-color: transparent;
+    }
   }

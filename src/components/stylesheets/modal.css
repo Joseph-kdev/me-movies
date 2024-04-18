@@ -1,0 +1,24 @@
+.modal {
+    border: transparent;
+    min-width: 407px;
+    margin-top: 10vh;
+    margin-left: 2px;
+    background: linear-gradient(to right, var(--primary), #0033cc);
+  }
+  .modal::backdrop {
+    background: #000000de;
+  }
+  .modal-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: transparent;
+  }
+  @media (min-width:768px) {
+    .modal {
+        min-width: 500px;
+        margin-left: 35vw;
+        margin-top: 24vh;
+    }
+  }

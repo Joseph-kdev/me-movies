@@ -1,35 +1,29 @@
 /* Movie card styling */
 
-.colored {
-    color: red;
-  }
-  
+
+
+body {
+  background: linear-gradient(to right, #232526, #414345); 
+}
+
   .movie-poster img {
-    max-height: 350px;
-    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 250px;
+    width: 170px;
   }
   
   .movie {
-    max-height: 55vh;
-    display: flex;
-    width: 400px;
-    margin-top: 2vh;
+    width: 180px;
   }
   .movie-poster {
     position: relative;
-    width: 240px;
-  }
-  #movie-details {
-    width: 250px;
-    margin-left: 8px;
-  }
-  ul {
-    width: 100vw;
-    padding-left: 0;
-  }
-  
-  ul li {
-    list-style: none;
+    max-width: 175px;
+    height: 275px;
+    border: solid transparent;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
   }
   .topRow {
     display: flex;
@@ -37,45 +31,80 @@
     align-items: center;
     position: absolute;
     bottom: 0px;
-    width: 229px;
-    background-color: rgb(0,0,0,0.5);
-    height: 45px;
-    padding-left: 5px;
-    padding-right: 5px;
+    left: 0;
+    width: 171px;
+    background-color: var(--primary);
+    min-height: 40px;
   }
   .topRow div h3 {
-    color: white;
+    color: var(--text);
   }
-  .heroinIcons {
-    height: 25px;
-    width: 25px;
+.title {
+  margin-left: 8px;
+  margin-right: 4px;
+}
+
+
+  .movie-modal {
+    width: 100%;
+    
   }
-  .secondRow {
-    margin-top: 20px;
-    margin-bottom: 30px;
+
+  .movie-pic {
+    max-width: 45%;
+    height: 100%;
+    margin: 4px;
+  }
+  .movie-pic img {
+    max-width: 175px;
   }
   .secondRow p {
    display: flex;
    align-items: center;
    margin-bottom: 10px;
    margin-top: 10px;
+   color: var(--text);
+  }
+  .secondRow span, .thirdRow span {
+    color: #040316;
   }
   .secondRow p div {
     margin-right: 5px;
     margin-left: 5px;
   }
-.secondRow hr {
-  margin-top: 15px;
+
+.movie-modal-details {
+  margin-left: 45%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  color: var(--text);
+  padding-left: 4px;
+  padding-right: 4px;
 }
+.movie-overview {
+  margin-top: 12px;
+}
+.movie-overview p {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  
+}
+.movie-overview h3 {
+  margin: 4px 0;
+  font-family: 'poppins';
+}
+.more {
+  margin-left: 4px;
+  color: var(--secondary);
+}
+
   .thirdRow button {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20%;
-    -webkit-border-radius: 20%;
-    -moz-border-radius: 20%;
-    -ms-border-radius: 20%;
-    -o-border-radius: 20%;
+    background-color: var(--secondary);
 }
   
   .thirdRow {
@@ -86,22 +115,30 @@
   }
   .thirdRow span {
     margin-left: 10px;
+    padding-right: 4px;
   }
-  .move-button {
-    border: solid black;
-    
+ .modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+  @media (min-width: 768px) {
+    .movie-modal-details {
+      margin-left: 40%;
+      margin-right: 20px;
+    }
+    .movie-overview {
+      margin-top: 2rem;
+    }
+    .movie-overview h3 {
+      margin-bottom: 1rem;
+    }
+    .modal-buttons {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
-  .other-row {
-    border: solid purple;
-    
-  }
-  .more {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-  }
-  .more button {
-    height: 26px;
-    background-color: pink;
-  }
-  

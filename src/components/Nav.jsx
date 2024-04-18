@@ -17,13 +17,6 @@ export const Nav = () => {
   }
 
   return (
-    // <div>
-    //     <Link to="/">Landing</Link>
-    //     <Link to="/home">Home</Link>
-    //     <Link to="/login">Login</Link>
-    //     <Link to="/collections">collections</Link>
-    // </div>
-
     <>
       <nav className="navbar">
       <div className="navbar-wrapper">
