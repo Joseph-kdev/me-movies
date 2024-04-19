@@ -27,10 +27,10 @@
 - search page
   - search bar ✔️
   - search functionality ✔️
-  - styling
+  - styling ✔️
 - Movies/tv shows pages
   - filter component ✔️
 
 ## Design requirements
 
-- Pick a color scheme/pallete
+- Pick a color scheme/pallete ✔️

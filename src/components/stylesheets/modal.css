@@ -3,7 +3,7 @@
     min-width: 407px;
     margin-top: 10vh;
     margin-left: 2px;
-    background: linear-gradient(to right, var(--primary), #0033cc);
+    background: var(--primary);
   }
   .modal::backdrop {
     background: #000000de;

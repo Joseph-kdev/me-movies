@@ -8,14 +8,16 @@ import { Nav } from './Nav'
 
 export const Search = () => {
     const [searchQuery, setSearchQuery] = useState('')
-    const baseUrl = `https://api.themoviedb.org/3/search/movie?api_key=${import.meta.env.VITE_API_KEY}`
+    const baseUrl = `https://api.themoviedb.org/3/search/multi?api_key=${import.meta.env.VITE_API_KEY}`
     
 
     const debouncedSearch = useDebounce(searchQuery, 1000)
 
     const searchOnline = async() => {
         const response = await axios.get(`${baseUrl}&query=${searchQuery}`)
-        return response.data.results
+        const results = response.data.results ? response.data.results : []
+        const filteredResults = results.filter(result => result.media_type === 'tv' || result.media_type === "movie")
+        return filteredResults
     }
 
     const {data: results, isLoading, isError } = useQuery({
@@ -28,8 +30,7 @@ export const Search = () => {
     if (isError) {
         return <div>You messed somewhere</div>
     }
-
-
+    
   return (
     <div className='search'>
         <Nav />

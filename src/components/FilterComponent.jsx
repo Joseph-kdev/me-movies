@@ -54,8 +54,8 @@ export const FilterComponent = ({ genres, mediaType}) => {
             key={genre.id}
             onClick={() => handleGenreChange(genre.id)}
             style={{
-              backgroundColor: selectedGenres.includes(genre.id) ? '#3366ff' : 'transparent',
-              color: selectedGenres.includes(genre.id) ? 'white' : 'black',
+              backgroundColor: selectedGenres.includes(genre.id) ? '#a3dcbc' : 'transparent',
+              color: selectedGenres.includes(genre.id) ? '#160d15' : '#efe4ef',
             }}
             className='genre'
           >

@@ -18,7 +18,6 @@
     -o-border-radius: 8px;
     font-family: 'source sans 3';
     font-weight: 600;
-    
 }
 
 .pagination {
@@ -33,7 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--accent);
+    background-color: var(--primary);
 }
 .pag-page {
     background-color: var(--primary);

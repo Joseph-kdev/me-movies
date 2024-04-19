@@ -36,7 +36,9 @@ export const MovieInfo = () => {
 
     // const officialTrailer = movie.videos.results.find(trailer => trailer.name === 'Official Trailer')
 
-    const officialTrailer = movie.videos.results[0]
+    const officialTrailer = movie.videos.results.find(trailer => trailer.type === 'Trailer') 
+                              ? movie.videos.results.find(trailer => trailer.type === 'Trailer')
+                              : movie.videos.results[0]
 
   return (
     <>

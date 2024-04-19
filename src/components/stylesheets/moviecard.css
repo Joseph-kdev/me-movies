@@ -1,11 +1,4 @@
 /* Movie card styling */
-
-
-
-body {
-  background: linear-gradient(to right, #232526, #414345); 
-}
-
   .movie-poster img {
     position: absolute;
     top: 0;
@@ -67,7 +60,7 @@ body {
    margin-top: 10px;
    color: var(--text);
   }
-  .secondRow span, .thirdRow span {
+ .thirdRow span {
     color: #040316;
   }
   .secondRow p div {
@@ -98,14 +91,14 @@ body {
 }
 .more {
   margin-left: 4px;
-  color: var(--secondary);
+  color: var(--accent);
 }
 
   .thirdRow button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondary);
+    background-color: var(--accent);
 }
   
   .thirdRow {
