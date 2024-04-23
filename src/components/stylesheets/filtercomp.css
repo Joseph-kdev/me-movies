@@ -18,6 +18,7 @@
     -o-border-radius: 8px;
     font-family: 'source sans 3';
     font-weight: 600;
+    cursor: pointer;
 }
 
 .pagination {
@@ -27,6 +28,7 @@
 }
 .pag-buttons, .pag-page {
     margin: 1vh 4vw;
+    cursor: pointer;
 }
 .pag-buttons {
     display: flex;

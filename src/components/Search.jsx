@@ -5,6 +5,7 @@ import { useQuery } from '@tanstack/react-query'
 import { useDebounce } from '../../hooks/useDebounce'
 import { MovieList } from './movieList'
 import { Nav } from './Nav'
+import { HashLoader, MoonLoader } from 'react-spinners'
 
 export const Search = () => {
     const [searchQuery, setSearchQuery] = useState('')
@@ -48,7 +49,9 @@ export const Search = () => {
                 <hr />
                 <div>
                 {isLoading ? (
-                    <div>loading</div>
+                            <div className='loading'>
+                                <MoonLoader size={70} color="#efe4ef" speedMultiplier={2}/>
+                            </div>
                 ) : (
                     < MovieList movies={results}/>
                 )}

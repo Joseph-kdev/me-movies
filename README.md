@@ -23,14 +23,19 @@
   - movie trailer ✔️
   - movie description ✔️
   - where to watch??
-  - style up 
+  - style up ✔️
 - search page
   - search bar ✔️
   - search functionality ✔️
   - styling ✔️
 - Movies/tv shows pages
   - filter component ✔️
+- Notification component
+  - show when movies state are changed
+  - Guide user interaction at first login??
 
 ## Design requirements
 
 - Pick a color scheme/pallete ✔️
+- loading animations ✔️
+- Error svgs ✔️

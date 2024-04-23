@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import axios from 'axios';
 import { useQueries } from '@tanstack/react-query';
 import './stylesheets/carousel.css'
+import { ClimbingBoxLoader } from 'react-spinners';
 
 
 
@@ -41,7 +42,12 @@ export const Carousel = () => {
   const isError = queryResults && queryResults.some((result) => result.isError);
 
   if (isLoading) {
-    return <div>Loading movies...</div>;
+    return (
+      <div className='loading'>
+        <ClimbingBoxLoader size={20} color="#efe4ef"/>
+        <ClimbingBoxLoader size={20} color="#efe4ef"/>
+      </div>
+    );
   }
 
   if (isError) {

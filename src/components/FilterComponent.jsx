@@ -3,6 +3,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { MovieList } from './movieList';
 import './stylesheets/filtercomp.css'
+import { ClimbingBoxLoader } from 'react-spinners';
 
 export const FilterComponent = ({ genres, mediaType}) => {
     const [selectedGenres, setSelectedGenres] = useState([]);
@@ -89,7 +90,9 @@ export const FilterComponent = ({ genres, mediaType}) => {
       
 
       {isLoading ? (
-        <div>Loading</div>
+                <div className='loading'>
+                <ClimbingBoxLoader size={20} color="#efe4ef" speedMultiplier={2}/>
+                </div>
       ) : (
         <MovieList movies={results}/>
       )}

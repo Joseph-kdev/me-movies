@@ -63,27 +63,28 @@ export const UserCollections = () => {
           {favorites && favorites.length > 0 ? (
              <MovieList movies={favorites} />
           ) : (
-            <h1>
-              You haven't added anything yet!
-            </h1>
+           <div className='no-data'>
+            <img src="/assets/void.svg" alt="" />
+           </div>
           )}
         </TabPanel>
         <TabPanel>
           {watchlist && watchlist.length > 0 ? (
               <MovieList movies={watchlist} />
           ) : (
-            <h1>
-              You haven't added anything yet!
-            </h1>
+            <div className='no-data'>
+            <img src="/assets/void.svg" alt="" />
+           </div>
           )}
         </TabPanel>
         <TabPanel>
           {watched && watched.length > 0 ? (
               <MovieList movies={watched} />
           ) : (
-            <h1>
-              You haven't added anything yet!
-            </h1>
+            <div className='no-data'>
+            <img src="/assets/void.svg" alt="" />
+            <h3>Oops!! <br />Looks like you haven't added anything yet!</h3>
+           </div>
           )}
         </TabPanel>
       </Tabs>

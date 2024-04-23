@@ -132,7 +132,7 @@ export const Movie = ({ id, title, overview, poster_path, vote_average, release_
       };
       //clip overview
       // Limit the overview text to 150 characters
-const limitedOverview = overview.substring(0, 170) + (overview.length > 170 ? '...' : '');
+const limitedOverview = overview.substring(0, 160) + (overview.length > 160 ? '...' : '');
 
     return (
         <>        
@@ -196,6 +196,11 @@ const limitedOverview = overview.substring(0, 170) + (overview.length > 170 ? '.
                         <Link to={`/${type}/${id}`} className="more">
                             <a>More</a>
                         </Link>
+                        <div className="more2">
+                        <Link to={`/${type}/${id}`} className="more2">
+                            <a>Watch Trailer</a>
+                        </Link>
+                        </div>
                         </p>
                     </div>
                     <div className="modal-buttons">
