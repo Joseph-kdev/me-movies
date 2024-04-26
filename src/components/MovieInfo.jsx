@@ -33,7 +33,7 @@ export const MovieInfo = () => {
     }
 
     if (isError) {
-      return <div>You fucked up</div>
+      return <div className="no-data"><img src="/assets/server-down.svg" alt="" /></div>
     }
 
     console.log(JSON.parse(JSON.stringify(movie)));

@@ -12,3 +12,7 @@ export const getTrending = async() => {
     const response = await axios.get(`${baseUrl}trending/all/day?api_key=${API_KEY}`)
     return response.data.results
 }
+export const getLatest = async() => {
+    const response = await axios.get(`${baseUrl}movie/top_rated?api_key=${API_KEY}`)
+    return response.data.results
+}

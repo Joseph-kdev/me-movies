@@ -1,8 +1,8 @@
 .modal {
     border: transparent;
-    min-width: 407px;
+    min-width: 406px;
     margin-top: 10vh;
-    margin-left: 2px;
+    margin-left: 4px;
     background: var(--primary);
   }
   .modal::backdrop {

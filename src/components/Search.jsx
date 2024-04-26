@@ -29,7 +29,7 @@ export const Search = () => {
     
 
     if (isError) {
-        return <div>You messed somewhere</div>
+        return <div className="no-data"><img src="/assets/server-down.svg" alt="" /></div>
     }
     
   return (
@@ -53,13 +53,15 @@ export const Search = () => {
                                 <MoonLoader size={70} color="#efe4ef" speedMultiplier={2}/>
                             </div>
                 ) : (
-                    < MovieList movies={results}/>
+                    <div className='collection-section'>
+                        < MovieList movies={results}/>
+                    </div>
                 )}
                 </div>
             </div>
         ) : (
             <div className='search-holding'>
-                Top shows/Recently searched
+                Search svg
             </div>
         )}
 

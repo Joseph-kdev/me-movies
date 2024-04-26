@@ -42,7 +42,7 @@ export const FilterComponent = ({ genres, mediaType}) => {
     };
   
     if (isError) {
-      return <div>Error fetching movies.</div>;
+      return <div className="no-data"><img src="/assets/server-down.svg" alt="" /></div>;
     }
   
   return (
@@ -94,7 +94,9 @@ export const FilterComponent = ({ genres, mediaType}) => {
                 <ClimbingBoxLoader size={20} color="#efe4ef" speedMultiplier={2}/>
                 </div>
       ) : (
-        <MovieList movies={results}/>
+        <div className='collection-section'>
+          <MovieList movies={results}/>
+        </div>
       )}
     </div>
     </div>

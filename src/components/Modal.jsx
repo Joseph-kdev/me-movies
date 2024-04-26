@@ -24,9 +24,9 @@ export const Modal = ({ openModal, closeModal, children}) => {
   
   return (
     <dialog
-    ref={ref}
-    onCancel={closeModal}
-    className='modal'
+      ref={ref}
+      onCancel={closeModal}
+      className='modal'
   >
     {children}
     <button onClick={closeModal} className='modal-button'>

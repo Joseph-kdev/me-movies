@@ -8,6 +8,7 @@ import 'react-tabs/style/react-tabs.css';
 import { MovieList } from './movieList'
 import { Nav } from './Nav'
 import './stylesheets/collections.css'
+import { MoonLoader } from 'react-spinners'
 
 
 export const UserCollections = () => {
@@ -41,11 +42,13 @@ export const UserCollections = () => {
   })
 
   if (isLoading) {
-    return <div>Loading...</div>
+    return <div className='loading'>
+    <MoonLoader size={70} color="#efe4ef" speedMultiplier={2}/>
+  </div>
   }
 
   if (isError) {
-    return <div>You messed up somewhere</div>
+    return <div className="no-data"><img src="/assets/server-down.svg" alt="" /></div>
   }
 
   return (
@@ -61,7 +64,9 @@ export const UserCollections = () => {
 
         <TabPanel>
           {favorites && favorites.length > 0 ? (
-             <MovieList movies={favorites} />
+            <div className='collection-section'>
+              <MovieList movies={favorites} />
+            </div>
           ) : (
            <div className='no-data'>
             <img src="/assets/void.svg" alt="" />
@@ -70,7 +75,9 @@ export const UserCollections = () => {
         </TabPanel>
         <TabPanel>
           {watchlist && watchlist.length > 0 ? (
+            <div className='collection-section'>
               <MovieList movies={watchlist} />
+            </div>
           ) : (
             <div className='no-data'>
             <img src="/assets/void.svg" alt="" />
@@ -79,7 +86,9 @@ export const UserCollections = () => {
         </TabPanel>
         <TabPanel>
           {watched && watched.length > 0 ? (
+            <div className='collection-section'>
               <MovieList movies={watched} />
+            </div>
           ) : (
             <div className='no-data'>
             <img src="/assets/void.svg" alt="" />

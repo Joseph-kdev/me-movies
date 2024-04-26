@@ -4,19 +4,20 @@
     top: 0;
     left: 0;
     max-height: 250px;
-    width: 170px;
+    width: 160px;
+    cursor: pointer;
   }
   
   .movie {
-    width: 180px;
+    width: 160px;
+    margin: 0.5rem;
   }
   .movie-poster {
     position: relative;
-    max-width: 175px;
-    height: 285px;
+    max-width: 160px;
+    height: 275px;
     border: solid transparent;
     font-family: "source sans 3", sans-serif;
-    cursor: pointer;
   }
   .topRow {
     display: flex;
@@ -25,7 +26,7 @@
     position: absolute;
     bottom: 0px;
     left: 0;
-    width: 171px;
+    width: 160px;
     background-color: var(--primary);
     min-height: 35px;
   }
@@ -41,17 +42,16 @@
 
 
   .movie-modal {
-    width: 100%;
-    
+    width: 100vw;
   }
 
   .movie-pic {
-    max-width: 45%;
+    max-width: 40%;
     height: 100%;
     margin: 4px;
   }
   .movie-pic img {
-    max-width: 175px;
+    max-width: 155px;
   }
   .secondRow p {
    display: flex;
@@ -59,9 +59,11 @@
    margin-bottom: 12px;
    margin-top: 10px;
    color: var(--text);
+   font-size: 0.8rem;
   }
  .thirdRow span {
     color: #040316;
+    
   }
   .secondRow p div {
     margin-right: 5px;
@@ -69,7 +71,7 @@
   }
 
 .movie-modal-details {
-  margin-left: 45%;
+  margin-left: 45vw;
   position: absolute;
   top: 0;
   right: 0;
@@ -77,11 +79,13 @@
   color: var(--text);
   padding-left: 4px;
   padding-right: 4px;
+  margin-right: 2.8rem;
 }
 
 .movie-overview p {
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
+  font-size: 0.8rem;
 }
 .movie-overview h3 {
   margin-top: 1rem;
@@ -120,7 +124,31 @@
   cursor: pointer;
  }
  
+ @media (min-width:400px) {
+  .movie {
+    width: 170px;
+  }
+  .movie-poster img {
+    width: 170px;
+  }
+  .movie-poster {
+    height: 280px;
+  }
+  .topRow {
+    width: 170px;
+  }
+  .movie-pic img {
+    max-width: 165px;
+  }
+  .movie-modal-details {
+    margin-right: 0;
+  }
+ }
+ 
   @media (min-width: 768px) {
+    .movie-modal {
+      max-width: 500px;
+    }
     .movie-modal-details {
       margin-left: 40%;
       margin-right: 20px;
@@ -137,5 +165,23 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+  }
+
+  @media (min-width:1024px) {
+    .movie {
+      width: 175px;
+    }
+    .movie-poster img {
+      width: 175px;
+    }
+    .movie-poster {
+      height: 280px;
+    }
+    .topRow {
+      width: 175px;
+    }
+    .movie-pic img {
+      max-width: 165px;
     }
   }

@@ -51,7 +51,7 @@ export const Carousel = () => {
   }
 
   if (isError) {
-    return <div>Error fetching movies</div>;
+    return <div className="no-data"><img src="/assets/server-down.svg" alt="" /></div>;
   }
 
 

@@ -5,8 +5,8 @@ import { addDoc, collection, deleteDoc, getDocs, query, where } from "firebase/f
 import { db } from "../config/firebase-config";
 import { useQueryClient } from "@tanstack/react-query"; 
 import './stylesheets/moviecard.css'
-import ReactModal from "react-modal";
 import { Modal } from "./Modal";
+import { Flip, toast } from "react-toastify";
 
 
 export const Movie = ({ id, title, overview, poster_path, vote_average, release_date, type }) => {
@@ -65,7 +65,17 @@ export const Movie = ({ id, title, overview, poster_path, vote_average, release_
                         release_date,
                         type
                     });
-                    console.log(`${title} added to ${listType}`);
+                    toast.success(`${title} added to ${listType}`, {
+                        position: "top-center",
+                        autoClose: 4000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                        transition: Flip,
+                    })
                     setMovieInCollections(prevState => ({
                         ...prevState,
                         [listType]: true
@@ -80,7 +90,17 @@ export const Movie = ({ id, title, overview, poster_path, vote_average, release_
                     console.log('Already saved');
                 } else if (action === 'remove') {
                     await deleteDoc(docRef);
-                    console.log(`${title} has been removed from ${listType}`);
+                    toast.warning(`${title} has been removed from ${listType}`, {
+                        position: "top-center",
+                        autoClose: 4000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                        transition: Flip,
+                    })
                     setMovieInCollections(prevState => ({
                         ...prevState,
                         [listType]: false
@@ -116,6 +136,17 @@ export const Movie = ({ id, title, overview, poster_path, vote_average, release_
             release_date,
             type,
           });
+          toast.success(`${title} moved to watched`, {
+            position: "top-center",
+            autoClose: 4000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Flip,
+        })
       
           // Update the movieInCollections state
           setMovieInCollections({
@@ -137,8 +168,8 @@ const limitedOverview = overview.substring(0, 160) + (overview.length > 160 ? '.
     return (
         <>        
         <div className='movie'>
-            <div className='movie-poster' onClick={() => setModal(true)}>
-                <img src={`${imgUrl}${poster_path}`} alt="movie poster" />
+            <div className='movie-poster'>
+                <img src={`${imgUrl}${poster_path}`} alt="movie poster" onClick={() => setModal(true)} />
                 <div className="topRow">
                     <div className="title">
                         <h3>{title}</h3> 

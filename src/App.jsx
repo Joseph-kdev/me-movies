@@ -9,6 +9,7 @@ import { UserCollections } from './components/UserCollections'
 import { Search } from './components/Search'
 import { Movies } from './components/Movies'
 import { TvShows } from './components/TvShows'
+import { ToastContainer } from 'react-toastify'
 
 
 
@@ -18,6 +19,18 @@ const { user } = useUserAuth()
 
   return (
     <>
+     <ToastContainer
+        position="top-center"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        />
       <Routes>
         <Route path='/' element={ <Landing /> } />
         <Route path='/home' element={user ? <Home /> : <Navigate to="/login" /> } />

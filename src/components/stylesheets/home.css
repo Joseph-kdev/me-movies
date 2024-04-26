@@ -1,4 +1,4 @@
-.trending-heading {
+.trending-heading, .top-heading {
     margin-top: 2vh;
     padding: 1vh 10px;
     font-family: "Tilt Neon";
@@ -6,4 +6,12 @@
 }
 hr {
     margin: 2vh 10px;
+}
+.trending-section, .top-section {
+    display: flex;
+    justify-content: center;
+}
+
+.top-rated {
+    background-color: var(--primary);
 }

@@ -5,7 +5,7 @@
     font-family: 'poppins';
 }
 .movie-trailer h2 {
-    margin: 1vh 10px;
+    margin: 1vh 2px;
     color: var(--text);
     font-family: 'tilt neon';
 }
@@ -29,17 +29,19 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: start;
-    margin: 0vh 10px;
+    margin: 0vh 4px;
     margin-top: 3vh;
+    font-size: 0.8rem;
 }
 
 .movie-picture {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 8px;
 }
 .movie-picture img {
-    width: 170px;
+    width: 155px;
     margin-top: 16px;
 }
 
@@ -51,7 +53,7 @@
     font-family: 'source sans 3';
 }
 .movie-rating p {
-    margin-right: 12px;
+    margin-right: 2px;
 }
 .movie-rating svg {
     margin-right: 8px;
@@ -71,7 +73,7 @@
 }
 .movie-description {
     padding: 12px 10px;
-    font-size: 19px;
+    font-size: 1rem;
     color: var(--text);
     background-color: var(--primary);
 }
@@ -127,6 +129,7 @@
     .movie-picture {
         width: 5vw;
         height: 25%;
+        margin-bottom: 1rem;
     }
     .movie-genre {
         width: 100%;
@@ -138,10 +141,10 @@
         width: 5vw;
     }
     .movie-cast {
-        margin-top: 3rem;
+        margin-top: 2.8rem;
         width: 100%;
     }
     .movie-description {
-        font-size: 18px;
+        font-size: 0.9rem;
     }
 }
