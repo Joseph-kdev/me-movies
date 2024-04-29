@@ -49,7 +49,7 @@ export const FilterComponent = ({ genres, mediaType}) => {
     <div>
       <div>
       <div className='genre-collection'>
-        <h3>Genre:</h3>
+        <h3>Filter Genre:</h3>
         {genres.map((genre) => (
           <button
             key={genre.id}

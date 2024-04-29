@@ -61,7 +61,8 @@ export const Search = () => {
             </div>
         ) : (
             <div className='search-holding'>
-                Search svg
+                <img src="/assets/search.svg" alt="" />
+                <h4>Let's find it</h4>
             </div>
         )}
 

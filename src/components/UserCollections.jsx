@@ -14,6 +14,7 @@ import { MoonLoader } from 'react-spinners'
 export const UserCollections = () => {
   //get user details
   const { user } = useUserAuth()
+  const [firstName, ...rest] = user.displayName.split(" ")
 
   //get user favorites from firestore with react query
   const userLists = async(listType) => {
@@ -54,7 +55,7 @@ export const UserCollections = () => {
   return (
     <>
     <Nav />
-    <h2 className='collection-heading'>Your Collection</h2>
+    <h2 className='collection-heading'>{firstName}'s Collection</h2>
       <Tabs className='tab'>
         <TabList className='tab-heading'>
           <Tab>Favorites</Tab>

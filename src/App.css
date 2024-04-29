@@ -25,6 +25,7 @@ body {
 .no-data {
   color: var(--text);
   text-align: center;
+  font-family: "source sans 3";
 }
 .no-data img {
   margin-bottom: 1rem;

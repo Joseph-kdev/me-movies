@@ -36,8 +36,6 @@ export const MovieInfo = () => {
       return <div className="no-data"><img src="/assets/server-down.svg" alt="" /></div>
     }
 
-    console.log(JSON.parse(JSON.stringify(movie)));
-
     const topActors = movie.credits.cast.slice(0,8)
 
     // const officialTrailer = movie.videos.results.find(trailer => trailer.name === 'Official Trailer')
