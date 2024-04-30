@@ -1,14 +1,10 @@
 import React from 'react'
-import { Nav } from './Nav'
-import { TvShows } from './TvShows'
-import { Movies } from './Movies'
-import { Carousel } from "./Carousel"
-
+import Login from './Login'
  
 export const Landing = () => {
   return (
     <>
-      <TvShows />
+      <Login />
     </>
   )
 }
