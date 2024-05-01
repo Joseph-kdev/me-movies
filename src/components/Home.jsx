@@ -26,7 +26,7 @@ const Home = () => {
 
 
     if(isError) {
-        return <div className="no-data"><img src="/assets/server-down.svg" alt="" /></div>
+        return <div className="no-data"><img src="/images/server-down.svg" alt="" /></div>
     }
 
     if(trendin) {

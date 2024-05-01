@@ -38,7 +38,7 @@ const Login = () => {
             <div id="login-contents">
             <div id="intro">
                 <div className="me-logo">
-                    <img src="/assets/Me Movies.svg" alt="" className="logo" />
+                    <img src="/images/Me Movies.svg" alt="" className="logo" />
                 </div>
                 <p>
                     Tired of losing track of what you're watching? Can't find your watchlist?

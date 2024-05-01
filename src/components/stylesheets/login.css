@@ -1,6 +1,6 @@
 /* Login styles */
 #login-page {
-    background-image: url('/assets/collage1.jpg');
+    background-image: url('/images/collage1.jpg');
     min-height: 100vh;
     display: flex;
     flex-flow: column;

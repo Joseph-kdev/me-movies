@@ -49,7 +49,7 @@ export const UserCollections = () => {
   }
 
   if (isError) {
-    return <div className="no-data"><img src="/assets/server-down.svg" alt="" /></div>
+    return <div className="no-data"><img src="/images/server-down.svg" alt="" /></div>
   }
 
   return (
@@ -70,7 +70,7 @@ export const UserCollections = () => {
             </div>
           ) : (
            <div className='no-data'>
-            <img src="/assets/void.svg" alt="" />
+            <img src="/images/void.svg" alt="" />
            </div>
           )}
         </TabPanel>
@@ -81,7 +81,7 @@ export const UserCollections = () => {
             </div>
           ) : (
             <div className='no-data'>
-            <img src="/assets/void.svg" alt="" />
+            <img src="/images/void.svg" alt="" />
            </div>
           )}
         </TabPanel>
@@ -92,7 +92,7 @@ export const UserCollections = () => {
             </div>
           ) : (
             <div className='no-data'>
-            <img src="/assets/void.svg" alt="" />
+            <img src="/images/void.svg" alt="" />
             <h3>Oops!! <br />Looks like you haven't added anything yet!</h3>
            </div>
           )}

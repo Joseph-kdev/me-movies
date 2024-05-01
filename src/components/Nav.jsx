@@ -21,7 +21,7 @@ export const Nav = () => {
       <nav className="navbar">
       <div className="navbar-wrapper">
         <a href="#" className="logo">
-          <img src="/assets/Me Movies.svg" alt="logo" />
+          <img src="/images/Me Movies.svg" alt="logo" />
         </a>
         <div className={`hamburger-icon ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
           <span className={`hamburger-line ${isOpen ? 'open' : ''}`}></span>

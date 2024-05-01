@@ -14,20 +14,21 @@ import { ClimbingBoxLoader } from 'react-spinners';
 export const Carousel = () => {
   const API_KEY = import.meta.env.VITE_API_KEY
   const images = [
-    { id: 293660, src: '/assets/deadpool.jpg' },
-    { id: 546554, src: '/assets/knives-out.jpg' },
-    { id: 157336, src: '/assets/interstellar.jpg' },
-    { id: 372058, src: '/assets/your-name.jpg' },
-    { id: 359724, src: '/assets/ford-v-ferrari.jpg' },
-    { id: 569094, src: '/assets/spiderman.jpg' },
-    { id: 13, src: '/assets/forrest-gump.jpg' },
+    { id: 293660, src: '/images/deadpool.jpg' },
+    { id: 546554, src: '/images/knives-out.jpg' },
+    { id: 157336, src: '/images/interstellar.jpg' },
+    { id: 372058, src: '/images/your-name.jpg' },
+    { id: 359724, src: '/images/ford-v-ferrari.jpg' },
+    { id: 569094, src: '/images/spiderman.jpg' },
+    { id: 13, src: '/images/forrest-gump.jpg' },
   ]
 
   const editorsChoiceIds = [293660, 546554, 13, 372058, 157336, 359724, 569094]
 
   const getMovie = async(id) => {
     const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`)
-    return response.data
+    const results = response.data ? response.data : []
+    return results
   }
 
   const queries = editorsChoiceIds.map(movieId => ({
@@ -45,15 +46,14 @@ export const Carousel = () => {
     return (
       <div className='loading'>
         <ClimbingBoxLoader size={20} color="#efe4ef"/>
-        <ClimbingBoxLoader size={20} color="#efe4ef"/>
       </div>
     );
   }
 
   if (isError) {
-    return <div className="no-data"><img src="/assets/server-down.svg" alt="" /></div>;
+    return <div className="no-data"><img src="/images/server-down.svg" alt="" /></div>;
   }
-
+  
 
   return (
   <>

@@ -42,14 +42,14 @@ export const FilterComponent = ({ genres, mediaType}) => {
     };
   
     if (isError) {
-      return <div className="no-data"><img src="/assets/server-down.svg" alt="" /></div>;
+      return <div className="no-data"><img src="/images/server-down.svg" alt="" /></div>;
     }
   
   return (
     <div>
       <div>
       <div className='genre-collection'>
-        <h3>Filter Genre:</h3>
+        <h3>Filter by genre:</h3>
         {genres.map((genre) => (
           <button
             key={genre.id}

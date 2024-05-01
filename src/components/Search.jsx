@@ -29,7 +29,7 @@ export const Search = () => {
     
 
     if (isError) {
-        return <div className="no-data"><img src="/assets/server-down.svg" alt="" /></div>
+        return <div className="no-data"><img src="/images/server-down.svg" alt="" /></div>
     }
     
   return (
@@ -61,7 +61,7 @@ export const Search = () => {
             </div>
         ) : (
             <div className='search-holding'>
-                <img src="/assets/search.svg" alt="" />
+                <img src="/images/search.svg" alt="" />
                 <h4>Let's find it</h4>
             </div>
         )}
