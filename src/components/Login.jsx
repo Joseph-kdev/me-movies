@@ -1,21 +1,36 @@
 import { auth, provider } from "../config/firebase-config"
 import { useState } from "react"
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup,signOut } from "firebase/auth"
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup} from "firebase/auth"
 import { useNavigate } from "react-router-dom"
 import './stylesheets/login.css'
+import { Flip, toast } from "react-toastify"
 
 const Login = () => {
-    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [isSignUp, setIsSignUp] = useState(false)
     const navigate = useNavigate()
 
-    const handleLogin = async() => {
+    const handleLogin = async(e) => {
+        e.preventDefault()
       try {
         if(isSignUp) {
-            await createUserWithEmailAndPassword(auth, name, password)
+            await createUserWithEmailAndPassword(auth, email, password)
+                    toast.success("Account created successfully", {
+                        position: "top-center",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "dark",
+                        transition: Flip,
+                    })
+            navigate('/home')
         } else {
-            await signInWithEmailAndPassword(auth, name, password)
+            await signInWithEmailAndPassword(auth, email, password)
+            navigate('/home')
         }
       } catch (error) {
         console.log(error);
@@ -49,8 +64,8 @@ const Login = () => {
             </div>
             <div id="login">
                 <form onSubmit={handleLogin} id="login-form">
-                <input type="text" placeholder="enter email" 
-                    onChange={(e) => setName(e.target.value)}
+                <input type="email" placeholder="enter email" 
+                    onChange={(e) => setEmail(e.target.value)}
                 />
                 <input type="password" placeholder="add password  :)" 
                     onChange={e => setPassword(e.target.value)}    

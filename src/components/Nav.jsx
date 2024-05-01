@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './stylesheets/nav.css'
 import { auth } from '../config/firebase-config'
+import { Bounce, toast } from 'react-toastify'
 
 export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,17 @@ export const Nav = () => {
 
   const logout = () => {
     auth.signOut().then(() => {
-      console.log('user logged out')
+      toast.error("Logged out", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+    })
     })
   }
 
