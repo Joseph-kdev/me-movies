@@ -13,15 +13,18 @@ import { Footer } from "./Footer";
 const Home = () => {
     const {data: trendin , isLoading, isError} = useQuery({
         queryKey:["trending"],
-        queryFn: () => getTrending()
+        queryFn: () => getTrending(),
+        initialData: [],
     })
     const {data: topMovies} = useQuery({
         queryKey:["top_Movies"],
-        queryFn: () => getTop('movie')
+        queryFn: () => getTop('movie'),
+        initialData: [],
     })
     const {data: topTv} = useQuery({
         queryKey:["top_tv"],
-        queryFn: () => getTop('tv')
+        queryFn: () => getTop('tv'),
+        initialData: [],
     })
 
 

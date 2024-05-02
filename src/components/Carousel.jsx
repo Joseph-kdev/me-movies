@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -57,6 +57,7 @@ export const Carousel = () => {
 
   return (
   <>
+  <Suspense fallback={<div className='loading'><ClimbingBoxLoader size={20} color="#efe4ef" /></div>}></Suspense>
     <Swiper
     modules={[Navigation, Pagination, Autoplay]}
     spaceBetween={0}

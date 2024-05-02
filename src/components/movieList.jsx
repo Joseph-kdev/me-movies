@@ -4,12 +4,13 @@ import './stylesheets/movielist.css'
 
 export const MovieList = ({ movies }) => {
 
+    const movielist = movies ? movies : []
 
   return (
     <>
         <div id="movie-list">
             <ul>
-                {movies.map(movie => (
+                {movielist.map(movie => (
                     <li key={movie.id}>
                         <Movie
                          id = {movie.id}
