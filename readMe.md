@@ -4,14 +4,13 @@
 
 ## Preview
 
-<video src="./preview/me-movies.mp4" width="480" height="270" controls></video>
-
+[![preview](./preview/me-movies.mp4)](./preview/me-movies.mp4)
 
 ## Description
 
 Me-movies provides the ultimate personal movie database experience. You can curate your own cinematic universe by: keeping track of your favorite films, creating watchlists for future viewing, and marking movies as watched to track your viewing history.
 
-Whether you're a casual moviegoer or a dedicated cinephile, Me-movies empowers you to organize, discover, and enjoy movies like never before. 
+Whether you're a casual moviegoer or a dedicated cinephile, Me-movies empowers you to organize, discover, and enjoy movies like never before.
 
 ## Features
 
