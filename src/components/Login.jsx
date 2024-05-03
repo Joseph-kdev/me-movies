@@ -59,7 +59,8 @@ const Login = () => {
                     Tired of losing track of what you're watching? Can't find your watchlist?
                     Don't have a clue what your favorite shows are any more? <br />
                     Let's fix that. <br />
-                    Join <span className="me-movies">Me-Movies</span>
+                    Join <span className="me-movies">Me-Movies</span>, the ultimate personal database for your movies
+                    and TV shows.
                 </p>
             </div>
             <div id="login">
