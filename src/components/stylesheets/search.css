@@ -34,12 +34,14 @@ form {
 .search-container hr {
     margin: 1vh 12px;
 }
+.search-heading {
+    color: var(--text);
+}
 .search-heading, .search-holding {
     margin: 2vh 20px;
     font-size: 20px;
     font-family: 'poppins';
     font-weight: 400;
-
 }
 .search-holding {
     display: flex;

@@ -169,7 +169,7 @@ const limitedOverview = overview.substring(0, 160) + (overview.length > 160 ? '.
         <>        
         <div className='movie'>
             <div className='movie-poster'>
-                <img src={`${imgUrl}${poster_path}`} alt="movie poster" onClick={() => setModal(true)} />
+                <img src={`${imgUrl}${poster_path}`} alt={title} onClick={() => setModal(true)} />
                 <div className="topRow">
                     <div className="title">
                         <h3>{title}</h3> 
