@@ -4,7 +4,7 @@
 
 ## Preview
 
-[![preview](./preview/me-movies.mp4)](./preview/me-movies.mp4)
+![preview](./preview/me2.png)
 
 ## Description
 

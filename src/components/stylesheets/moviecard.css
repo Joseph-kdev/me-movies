@@ -39,6 +39,10 @@
   margin-right: 2px;
   margin-left: 4px;
 }
+.favorite {
+  padding-right: 4px;
+  cursor: pointer;
+}
 
 
   .movie-modal {
@@ -105,7 +109,11 @@
     align-items: center;
     background-color: var(--accent);
 }
-  
+  .thirdRow div {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
   .thirdRow {
     display: flex;
     justify-content: flex-start;
