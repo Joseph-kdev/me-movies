@@ -33,13 +33,13 @@ const { user } = useUserAuth()
         />
       <Routes>
         <Route path='/' element={ <Landing /> } />
-        <Route path='/home' element={user ? <Home /> : <Navigate to="/login" /> } />
+        <Route path='/home' element={ <Home /> } />
         <Route path='/login' element={ <Login /> } />
         <Route path='/collections' element={ user ? <UserCollections /> : <Navigate to="/login" /> } />
-        <Route path='/:type/:id' element={ user ? <MovieInfo /> :  <Navigate to="/login" /> } />
-        <Route path='/search' element={ user ? <Search /> :  <Navigate to="/login" /> } />
-        <Route path='/movies' element={ user ? <Movies /> :  <Navigate to="/login" /> } />
-        <Route path='/tvshows' element={ user ? <TvShows /> :  <Navigate to="/login" /> } />
+        <Route path='/:type/:id' element={ <MovieInfo /> } />
+        <Route path='/search' element={ <Search /> } />
+        <Route path='/movies' element={ <Movies /> } />
+        <Route path='/tvshows' element={ <TvShows /> } />
       </Routes>
     </>
   )

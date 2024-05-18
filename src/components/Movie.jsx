@@ -68,6 +68,22 @@ export const Movie = ({
   }, [user, id]);
 
   const toggleMovieCollection = async (listType, action) => {
+    if(!user) {
+      toast.error((
+      <div>
+        Please login/sign-up <Link to="/login">here</Link> to access this feature :)
+      </div>), {
+        position: "top-center",
+        autoClose: false,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Flip,
+      });
+    }
     const collectionRef = collection(db, `users/${user.uid}/${listType}`);
 
     try {

@@ -3,27 +3,42 @@ import { Link } from 'react-router-dom'
 import './stylesheets/nav.css'
 import { auth } from '../config/firebase-config'
 import { Bounce, toast } from 'react-toastify'
+import { useUserAuth } from '../UserAuthContext'
 
 export const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { user } = useUserAuth()
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const logout = () => {
-    auth.signOut().then(() => {
-      toast.error("Logged out", {
-        position: "top-center",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        transition: Bounce,
-    })
+    if(user){
+      auth.signOut().then(() => {
+        toast.error("Logged out", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Bounce,
+      })
+      })
+    }
+    toast.info("Welcome to the login page", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
     })
   }
 
@@ -31,7 +46,7 @@ export const Nav = () => {
     <>
       <nav className="navbar">
       <div className="navbar-wrapper">
-        <a href="#" className="logo">
+        <a href="/home" className="logo">
           <img src="/images/Me Movies.svg" alt="logo" />
         </a>
         <div className={`hamburger-icon ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
@@ -63,7 +78,7 @@ export const Nav = () => {
           </li>
           <li className="navbar-item">
             <Link to="/login" className="navbar-link" onClick={logout}>
-              Sign Out
+              {user ? "Sign Out" : "Login/Sign-up"}
             </Link>
           </li>
         </ul>

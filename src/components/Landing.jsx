@@ -1,10 +1,10 @@
 import React from 'react'
-import Login from './Login'
+import Home from './Home'
  
 export const Landing = () => {
   return (
     <>
-      <Login />
+      <Home />
     </>
   )
 }
