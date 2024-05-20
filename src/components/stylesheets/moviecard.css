@@ -44,15 +44,34 @@
   cursor: pointer;
 }
 
+.ReactModal__Body--open {
+  overflow: hidden;
+}
+
+.modal {
+  position: relative;
+  min-width: 360px;
+  margin-top: 30%;
+  padding: 2px;
+  background: var(--primary);
+}
+
+.modal-button {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
   .movie-modal {
     width: 100vw;
+    display: flex;
   }
-
   .movie-pic {
     max-width: 40%;
     height: 100%;
-    margin: 4px;
+    margin: 2px;
   }
   .movie-pic img {
     max-width: 155px;
@@ -75,15 +94,11 @@
   }
 
 .movie-modal-details {
-  margin-left: 45vw;
-  position: absolute;
-  top: 0;
-  right: 0;
   height: 100%;
   color: var(--text);
+  margin-left: 12px;
   padding-left: 4px;
   padding-right: 4px;
-  margin-right: 2.8rem;
 }
 
 .movie-overview p {
@@ -154,12 +169,23 @@
  }
  
   @media (min-width: 768px) {
+    .modal {
+      max-width: 500px;
+      position: absolute;
+      margin-top: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+}
     .movie-modal {
       max-width: 500px;
     }
     .movie-modal-details {
-      margin-left: 40%;
-      margin-right: 20px;
+      margin-right: 2.4rem;
     }
     .movie-overview {
       margin-top: 1rem;

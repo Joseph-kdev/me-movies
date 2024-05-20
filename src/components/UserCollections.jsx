@@ -50,7 +50,7 @@ export const UserCollections = () => {
   }
 
   if (isError) {
-    return <div className="no-data"><img src="/images/server-down.svg" alt="" /></div>
+    return <div className="no-data"><img src="/images/server-down.svg" alt="" /><h3>An Error occurred. Server inaccessible</h3></div>
   }
 
   return (

@@ -12,7 +12,7 @@ import {
 import { db } from "../config/firebase-config";
 import { useQueryClient } from "@tanstack/react-query";
 import "./stylesheets/moviecard.css";
-import { Modal } from "./Modal";
+import Modal from "react-modal";
 import { Flip, toast } from "react-toastify";
 
 export const Movie = ({
@@ -33,7 +33,13 @@ export const Movie = ({
     favorites: false,
   });
   // Control modal
-  const [modal, setModal] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  //closing the modal
+  const closeModal = () => {
+    setOpen(false);
+  };
+
   // Fetch data from Firestore upon login
   useEffect(() => {
     const fetchMovieCollections = async () => {
@@ -68,21 +74,24 @@ export const Movie = ({
   }, [user, id]);
 
   const toggleMovieCollection = async (listType, action) => {
-    if(!user) {
-      toast.error((
-      <div>
-        Please login/sign-up <Link to="/login">here</Link> to access this feature :)
-      </div>), {
-        position: "top-center",
-        autoClose: false,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        transition: Flip,
-      });
+    if (!user) {
+      toast.error(
+        <div>
+          Please login/sign-up <Link to="/login">here</Link> to access this
+          feature :)
+        </div>,
+        {
+          position: "top-center",
+          autoClose: 8000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Flip,
+        }
+      );
     }
     const collectionRef = collection(db, `users/${user.uid}/${listType}`);
 
@@ -210,7 +219,7 @@ export const Movie = ({
           <img
             src={`${imgUrl}${poster_path}`}
             alt={title}
-            onClick={() => setModal(true)}
+            onClick={() => setOpen(true)}
           />
           <div className="topRow">
             <div className="title">
@@ -256,7 +265,18 @@ export const Movie = ({
           </div>
         </div>
       </div>
-      <Modal openModal={modal} closeModal={() => setModal(false)}>
+      <Modal
+        isOpen={open}
+        onRequestClose={closeModal}
+        shouldCloseOnOverlayClick={true}
+        ariaHideApp = {false}
+        className= "modal"
+        style = {{
+          overlay : {
+            backgroundColor: '#000000de'
+          }
+        }}
+      >
         <div className="movie-modal">
           <div className="movie-pic">
             <img src={`${imgUrl}${poster_path}`} alt="movie poster" />
@@ -348,33 +368,82 @@ export const Movie = ({
                     )}
                   <div className="thirdRow">
                     <button>
-                    {movieInCollections.watchlist ? (
+                      {movieInCollections.watchlist ? (
+                        <div
+                          onClick={() =>
+                            toggleMovieCollection("watchlist", "remove")
+                          }
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="#000000"
+                            className="w-6 h-6"
+                            width="24px"
+                            height="24px"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M4.25 12a.75.75 0 0 1 .75-.75h14a.75.75 0 0 1 0 1.5H5a.75.75 0 0 1-.75-.75Z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                          <span>Remove from watchlist</span>
+                        </div>
+                      ) : (
+                        <div
+                          onClick={() =>
+                            toggleMovieCollection("watchlist", "add")
+                          }
+                          disabled={movieInCollections.watched}
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="#0a0a0a"
+                            className="w-6 h-6"
+                            width="24px"
+                            height="24px"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                          <span>Add to Watchlist</span>
+                        </div>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              )}
+              {!movieInCollections.watchlist && (
+                <div className="thirdRow">
+                  <button>
+                    {movieInCollections.watched ? (
                       <div
                         onClick={() =>
-                          toggleMovieCollection("watchlist", "remove")
+                          toggleMovieCollection("watched", "remove")
                         }
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          fill="#000000"
+                          viewBox="0 0 24 24"
+                          fill="#0a0a0a"
                           className="w-6 h-6"
                           width="24px"
                           height="24px"
                         >
                           <path
                             fillRule="evenodd"
-                            d="M4.25 12a.75.75 0 0 1 .75-.75h14a.75.75 0 0 1 0 1.5H5a.75.75 0 0 1-.75-.75Z"
+                            d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
                             clipRule="evenodd"
                           />
                         </svg>
-                        <span>Remove from watchlist</span>
+                        <span>Remove from watched</span>
                       </div>
                     ) : (
                       <div
-                        onClick={() =>
-                          toggleMovieCollection("watchlist", "add")
-                        }
-                        disabled={movieInCollections.watched}
+                        onClick={() => toggleMovieCollection("watched", "add")}
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -385,66 +454,35 @@ export const Movie = ({
                         >
                           <path
                             fillRule="evenodd"
-                            d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+                            d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
                             clipRule="evenodd"
                           />
                         </svg>
-                        <span>Add to Watchlist</span>
+                        <span>Mark as Watched</span>
                       </div>
                     )}
-                    </button>
-                  </div>
-                </div>
-              )}
-              {!movieInCollections.watchlist && (
-                <div className="thirdRow">
-                    <button>
-                  {movieInCollections.watched ? (
-                    <div
-                      onClick={() => toggleMovieCollection("watched", "remove")}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="#0a0a0a"
-                        className="w-6 h-6"
-                        width="24px"
-                        height="24px"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Remove from watched</span>
-                    </div>
-                  ) : (
-                    <div
-                      onClick={() => toggleMovieCollection("watched", "add")}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="#0a0a0a"
-                        className="w-6 h-6"
-                        width="24px"
-                        height="24px"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span>Mark as Watched</span>
-                    </div>
-                  )}
                   </button>
                 </div>
               )}
             </div>
           </div>
         </div>
+        <button onClick={closeModal} className="modal-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="red"
+            className="w-6 h-6"
+            width="24px"
+            height="24px"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </button>
       </Modal>
     </>
   );
