@@ -51,7 +51,13 @@
 .modal {
   position: relative;
   min-width: 360px;
-  margin-top: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   padding: 2px;
   background: var(--primary);
 }
@@ -148,6 +154,12 @@
  }
  
  @media (min-width:400px) {
+  .modal {
+    max-width: 400px;
+  }
+  .movie-modal-details {
+    width: 200px;
+  }
   .movie {
     width: 170px;
   }
@@ -171,21 +183,13 @@
   @media (min-width: 768px) {
     .modal {
       max-width: 500px;
-      position: absolute;
-      margin-top: 0;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      -o-transform: translate(-50%, -50%);
 }
     .movie-modal {
       max-width: 500px;
     }
     .movie-modal-details {
       margin-right: 2.4rem;
+      width: 80%;
     }
     .movie-overview {
       margin-top: 1rem;

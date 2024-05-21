@@ -273,7 +273,8 @@ export const Movie = ({
         className= "modal"
         style = {{
           overlay : {
-            backgroundColor: '#000000de'
+            backgroundColor: '#000000de',
+            zIndex: '99'
           }
         }}
       >
