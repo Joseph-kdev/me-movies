@@ -20,6 +20,16 @@
   @media (min-width:1024px) {
     #movie-list ul {
       width: 98vw;
+      grid-template-columns: repeat(5, auto);
+    }
+  }
+  @media (min-width:1224px) {
+    #movie-list ul {
+      grid-template-columns: repeat(6, auto);
+    }
+  }
+  @media (min-width:1364px) {
+    #movie-list ul {
       grid-template-columns: repeat(7, auto);
     }
   }
