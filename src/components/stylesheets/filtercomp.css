@@ -1,0 +1,60 @@
+.genre-collection, .pagination {
+    margin: 1vh 16px;
+}
+.genre-collection h3 {
+    margin:1vh 0;
+    font-family: 'tilt neon';
+    color: var(--text);
+}
+.genre {
+    margin: 1vh 0px;
+    margin-right: 2vw;
+    height: 1.8rem;
+    box-shadow: none;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    font-family: 'source sans 3';
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pag-buttons, .pag-page {
+    margin: 1vh 4vw;
+    cursor: pointer;
+}
+.pag-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+}
+.pag-page {
+    background-color: var(--primary);
+    width: 28px;
+    height: 28px;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+@media (min-width:768px) {
+    .genre-collection {
+        text-align: center;
+    }
+    .genre-collection h3 {
+        text-align: left;
+    }
+}
