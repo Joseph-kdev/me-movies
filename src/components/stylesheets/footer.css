@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .footer {
     display: flex;
     flex-direction: column;
@@ -20,4 +21,28 @@
 }
 .footer-icons a {
     margin-left: 1rem;
+=======
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary);
+    padding-top: 4vh;
+}
+.footer-logo {
+    width: 80px;
+}
+.footer-right, .footer-dev {
+    color: var(--text);
+    margin: 2rem;
+    font-size: 1.2rem;
+    font-family: "rowdies";
+}
+.footer-dev {
+    font-size: 1.9rem;
+    font-family: "protest revolution";
+}
+.footer-icons a {
+    margin-left: 1rem;
+>>>>>>> master
 }
