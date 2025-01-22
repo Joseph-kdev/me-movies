@@ -19,7 +19,7 @@ export const MovieList = ({ movies }) => {
                          poster_path={movie.poster_path}
                          vote_average={movie.vote_average}
                          release_date={movie.release_date ? movie.release_date : movie.first_air_date}
-                         type = {movie.name ? 'tv' : 'movie'}
+                         type = {movie.type || (movie.name ? 'tv' : 'movie')}
                          />
                     </li>
                 ))}

@@ -21,3 +21,8 @@ export const getSimilar = async(type, id) => {
     const response = await axios.get(`${baseUrl}${type}/${id}/similar?api_key=${API_KEY}`)
     return response.data.results
 }
+
+export const getMovieInfo = async (type, id) => {
+    const response = await axios.get(`${baseUrl}${type}/${id}?api_key=${API_KEY}&append_to_response=videos,credits`);
+    return response.data;
+};

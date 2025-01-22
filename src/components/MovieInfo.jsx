@@ -1,29 +1,19 @@
-import axios from 'axios'
-import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import './stylesheets/MovieInfo.css'
 import { Nav } from './Nav'
 import { MoonLoader } from 'react-spinners'
-import { getSimilar } from '../services/movies'
+import { getMovieInfo, getSimilar } from '../services/movies'
 import { MovieList } from './movieList'
 
 export const MovieInfo = () => {
-  const API_KEY = import.meta.env.VITE_API_KEY
     //grab movie id from url
-    const { id, type } = useParams()
-    const baseUrl = `https://api.themoviedb.org/3/${type}/${id}?api_key=${API_KEY}&append_to_response=videos,credits`
-    const imgUrl = 'https://image.tmdb.org/t/p/w500/'
-    
-    //use movie id to return movie details from TMDB
-    const getMovieInfo = async() => {
-      const response = await axios.get(baseUrl)
-      return response.data
-    }
+    const { type, id } = useParams()
+   const imgUrl = 'https://image.tmdb.org/t/p/w500/'
 
     const {data: movie, isLoading, isError} = useQuery({
       queryKey:['movie'],
-      queryFn: getMovieInfo
+      queryFn: () => getMovieInfo(type, id),
     })
   //fetch similar movies or shows
     const {data: similarData } = useQuery({
@@ -52,8 +42,7 @@ export const MovieInfo = () => {
                               ? movie.videos.results.find(trailer => trailer.type === 'Trailer')
                               : movie.videos.results[0]
 
-    console.log(JSON.stringify(similarData))
-
+    
   return (
     <>
       <Nav />
