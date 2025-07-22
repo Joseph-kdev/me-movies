@@ -1,0 +1,27 @@
+.collection-heading {
+    padding-top: 12vh;
+    font-family: 'tilt neon';
+    color: var(--text);
+    margin: 1vh 16px;
+    font-size: 2rem;
+}
+.tab {
+    margin: 1vh 4px;
+}
+.tab-heading {
+    background-color: var(--primary);
+    margin: 2vh 0;
+    color: var(--text);
+    font-family: 'source sans 3';
+}
+.collection-section {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width:1024px) {
+    .collection-section {
+        width: 98vw;
+        grid-template-columns: repeat(7, auto);
+    }
+}

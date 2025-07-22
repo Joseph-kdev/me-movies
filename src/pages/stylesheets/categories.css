@@ -1,0 +1,14 @@
+.movies-filter {
+    padding-top: 110px;
+}
+.movies-filter h2 {
+    margin: 2vh 16px;
+    font-family: 'rubik gemstones';
+    font-size: 3rem;
+    color: var(--accent);
+}
+@media (min-width:768px) {
+    .movies-filter h2 {
+        text-align: center;
+    }
+}
