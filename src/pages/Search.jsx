@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import {  useState } from 'react'
 import './stylesheets/search.css'
 import axios from 'axios'
 import { useQuery } from '@tanstack/react-query'
 import { useDebounce } from '../../hooks/useDebounce'
 import { MovieList } from '../components/movieList'
 import { Nav } from '../components/Nav'
-import { HashLoader, MoonLoader } from 'react-spinners'
+import {  MoonLoader } from 'react-spinners'
 
 export const Search = () => {
     const [searchQuery, setSearchQuery] = useState('')

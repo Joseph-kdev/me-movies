@@ -1,15 +1,15 @@
 import './App.css'
 import { Route, Routes, Navigate } from 'react-router-dom'
-import Login from './components/Login'
-import Home from './components/Home'
-import { Landing } from './components/Landing'
 import { useUserAuth } from './UserAuthContext'
-import { MovieInfo } from './components/MovieInfo'
-import { UserCollections } from './components/UserCollections'
-import { Search } from './components/Search'
-import { Movies } from './components/Movies'
-import { TvShows } from './components/TvShows'
 import { ToastContainer } from 'react-toastify'
+import { Landing } from './pages/Landing'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import { UserCollections } from './pages/UserCollections'
+import { MovieInfo } from './pages/MovieInfo'
+import { Search } from './pages/Search'
+import { Movies } from './pages/Movies'
+import { TvShows } from './pages/TvShows'
 
 
 

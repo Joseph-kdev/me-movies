@@ -1,4 +1,3 @@
-import React from 'react'
 import FilterComponent from '../components/FilterComponent'
 import { Nav } from '../components/Nav'
 import './stylesheets/categories.css'
