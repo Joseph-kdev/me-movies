@@ -225,6 +225,7 @@ export const Movie = ({
             <div className="title">
               <h3>{title}</h3>
             </div>
+          </div>
             <div className="heroinIcons favorite">
               {movieInCollections.favorites ? (
                 <svg
@@ -262,7 +263,6 @@ export const Movie = ({
                 </svg>
               )}
             </div>
-          </div>
         </div>
       </div>
       <Modal
