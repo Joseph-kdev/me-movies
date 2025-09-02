@@ -9,7 +9,7 @@ export const getMovies = async(genre) => {
 }
 
 export const getTrending = async() => {
-    const response = await axios.get(`${baseUrl}trending/all/day?api_key=${API_KEY}`)
+    const response = await axios.get(`${baseUrl}trending/movie/day?api_key=${API_KEY}`)
     return response.data.results
 }
 export const getTop = async(type) => {
