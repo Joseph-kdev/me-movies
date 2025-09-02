@@ -31,20 +31,6 @@ const Home = () => {
         return <div className="no-data"><img src="/images/server-down.svg" alt="" /></div>
     }
 
-    // if(trendin) {
-    //     toast.success('Logged in Successfully. Click the tiny movie posters for more options', {
-    //         position: "top-center",
-    //         autoClose: 3000,
-    //         hideProgressBar: false,
-    //         closeOnClick: true,
-    //         pauseOnHover: false,
-    //         draggable: true,
-    //         progress: undefined,
-    //         theme: "dark",
-    //         transition: Bounce,
-    //         });
-    // }
-
     return ( 
         <>
             < Nav />
