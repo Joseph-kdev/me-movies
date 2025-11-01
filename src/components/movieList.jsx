@@ -1,15 +1,17 @@
 import { Movie } from "./Movie";
 import "./stylesheets/movielist.css";
+import '../App.css'
 
 export const MovieList = ({ movies }) => {
   const movielist = movies ? movies : [];
   return (
     <>
       <div id="movie-list">
-        <ul>
-          {movielist.map((movie) => (
-            <li key={movie.id}>
+        <ul className="">
+          {movielist.map((movie, index) => (
+            <li key={movie.id} className="flex justify-center">
               <Movie
+                index = {index}
                 id={movie.id}
                 title={movie.title ? movie.title : movie.name}
                 overview={movie.overview}
