@@ -37,7 +37,6 @@ const Home = () => {
             <Carousel />
             <div>
             <h1 className="trending-heading">Trending</h1>
-            <hr />
             {isLoading ? (
                 <div className='loading'>
                   <MoonLoader size={70} color="#efe4ef" speedMultiplier={2}/>
@@ -51,7 +50,6 @@ const Home = () => {
 
             <div className="top-rated">
             <h1 className="top-heading">Top rated Movies</h1>
-            <hr />
             {isLoading ? (
                 <div className='loading'>
                   <MoonLoader size={70} color="#efe4ef" speedMultiplier={2}/>
@@ -73,7 +71,6 @@ const Home = () => {
 
             <div className="top-rated-tv">
             <h1 className="top-heading">Top rated Shows</h1>
-            <hr />
             {isLoading ? (
                 <div className='loading'>
                   <MoonLoader size={70} color="#efe4ef" speedMultiplier={2}/>

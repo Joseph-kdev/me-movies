@@ -1,90 +1,3 @@
-/* Login styles */
-#login-page {
-    background-image: url('/images/collage1.jpg');
-    min-height: 100vh;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-  }
-  .me-logo {
-    margin-bottom: 15px;
-  }
-  #login-contents {
-    margin-top: 24vh;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    max-width: 438px;
-    color: var(--text);
-    background-color: var(--background);
-  }
-  #intro {
-    text-align: center;
-    margin-bottom: 2vh;
-  }
-  #intro p {
-    font-family: "Tilt Neon";
-    line-height: 1.4;
-    padding: 0 8px;
-  }
-  #login {
-    font-family: "Rowdies", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  #login div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #google-button {
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    height: 25px;
-    color: var(--text);
-    background-color: var(--secondary);
-  }
-  #login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #login-form input {
-    margin-top: 1.5vh;
-    height: 3.5vh;
-    width: 55%;
-    padding-left: 5px;
-  }
-  input :focus{
-    border: solid var(--accent);
-  }
-  #login-form button {
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-    height: 24px;
-    background-color: var(--secondary);
-    color: var(--text);
-  }
-  
-  .sign {
-    height: 24px;
-    background-color: var(--accent);
-    color: var(--background);
-    
-  }
-  #login div p {
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-  }
-  button {
-    border: none;
-    padding: 6px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-
 /* logo animation */
 .me-movies {
   margin-left: 5px;
@@ -125,7 +38,7 @@
     font-weight: 400;
     font-style: normal;
     color: var(--primary);
-  } 
+  }
   100% {
     font-family: "Rowdies", sans-serif;
     font-weight: 400;

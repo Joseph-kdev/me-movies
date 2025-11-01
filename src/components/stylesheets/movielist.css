@@ -1,36 +1,25 @@
 /* movie lists */
 
 #movie-list ul {
-    padding: 2px;
     width: 100vw;
     display: grid;
     grid-template-columns: repeat(2, auto);
     list-style: none;
+    gap: 8px;
+    padding: 8px;
   }
-#movie-list ul li {
-  display: flex;
-  justify-content: center;
-}
 
   @media (min-width:768px) {
     #movie-list ul {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
+      padding: 0;
     }
   }
   @media (min-width:1024px) {
     #movie-list ul {
       width: 98vw;
-      grid-template-columns: repeat(5, auto);
+      grid-template-columns: repeat(10, auto);
     }
   }
-  @media (min-width:1224px) {
-    #movie-list ul {
-      grid-template-columns: repeat(6, auto);
-    }
-  }
-  @media (min-width:1364px) {
-    #movie-list ul {
-      grid-template-columns: repeat(7, auto);
-    }
-  }
+
   

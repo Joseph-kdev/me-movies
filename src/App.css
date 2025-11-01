@@ -1,14 +1,40 @@
-* {
-  margin: 0;
-  padding: 0;
+@import "tailwindcss";
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: sans-serif;
+    /* color: #333; */
+  }
 }
 
 :root {
   --text: #efe4ef;
   --background: #160d15;
-  --primary: #484F45;
+  --primary: #484f45;
   --secondary: #303e26;
   --accent: #a3dcbc;
+}
+
+@theme {
+  --color-text: #efe4ef;
+  --color-background: #160d15;
+  --color-primary: #484f45;
+  --color-secondary: #303e26;
+  --color-accent: #a3dcbc;
 }
 
 body {
@@ -32,7 +58,7 @@ body {
   max-width: 90vw;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .no-data img {
     max-width: 24vw;
   }

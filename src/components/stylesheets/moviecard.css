@@ -1,4 +1,5 @@
 /* Movie card styling */
+@import 'tailwindcss';
 .movie-poster img {
   position: absolute;
   top: 0;
