@@ -387,7 +387,7 @@ export const MovieInfo = () => {
                         <div className="thirdRow">
                           <button
                             onClick={() => moveToWatched()}
-                            className="w-48"
+                            className="w-48 p-1 rounded-2xl"
                           >
                             <div className="flex items-center gap-2">
                               <svg
@@ -412,7 +412,7 @@ export const MovieInfo = () => {
                       )}
                       {!movieInCollections.watched && (
                         <div className="thirdRow">
-                          <button className="w-48">
+                          <button className="w-48 p-1 rounded-2xl">
                             {movieInCollections.watchlist ? (
                               <div
                                 onClick={() =>
@@ -468,12 +468,14 @@ export const MovieInfo = () => {
                     </div>
                   ) : (
                     <div className="thirdRow">
-                      <button>
+                      <button
+                        className="w-48 p-1 rounded-2xl"
+                      >
                         <div
                           onClick={() =>
                             toggleMovieCollection("watched", "remove")
                           }
-                          className="flex items-center gap-2 w-48"
+                          className="flex items-center gap-2"
                         >
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -524,7 +526,7 @@ export const MovieInfo = () => {
                   <div className="flex items-center gap-1">
                     <Clock className="h-4 w-4" />
                     {type == "movie" ? (
-                      <span>{formatRuntime(movie.runtime)} min</span>
+                      <span>{formatRuntime(movie.runtime)}</span>
                     ) : (
                       <span>{movie.number_of_seasons} sns</span>
                     )}
