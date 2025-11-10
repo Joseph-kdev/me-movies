@@ -86,11 +86,11 @@ export const Movie = ({
           <AnimatePresence>
             {hoveredMovie === id && (
               <motion.div
-                initial={{ opacity: 0, width: "400px" }}
-                animate={{ opacity: 1, width: "400px"}}
-                exit={{ opacity: 0, width: "400px" }}
+                initial={{ opacity: 0, width: "300px" }}
+                animate={{ opacity: 1, width: "300px"}}
+                exit={{ opacity: 0, width: "300px" }}
                 transition={{ duration: 0.3 }}
-                className={`absolute top-0 z-20 rounded-lg bg-accent/90 shadow-2xl hidden lg:block p-4 ${
+                className={`absolute top-0 z-20 rounded-lg bg-accent/90 shadow-2xl hidden lg:block p-3 ${
                   shouldPositionLeft(index) ? "right-0" : "left-0"
                 }`}
               >
@@ -106,7 +106,7 @@ export const Movie = ({
                       </p>
                     </motion.div>
                     <motion.img
-                      className="w-full h-[200px] object-cover rounded-lg"
+                      className="w-full h-40 object-cover rounded-lg"
                       layoutId={`movie-img-${id}`}
                       src={
                         poster_path
@@ -117,10 +117,10 @@ export const Movie = ({
                     />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="space-y-4">
+                    <div className="space-y-2">
                       <motion.h3
                         layoutId={`movie-title-${id}`}
-                        className="font-semibold leading-tight text-background"
+                        className="font-semibold leading-tight text-background text-sm"
                       >
                         {title}
                       </motion.h3>
@@ -129,7 +129,7 @@ export const Movie = ({
                         animate={{ opacity: 1, filter: "blur(0px)" }}
                         exit={{ opacity: 0, filter: "blur(4px)" }}
                         transition={{ delay: 0.1 }}
-                        className="text-sm line-clamp-4 leading-relaxed text-secondary"
+                        className="text-xs line-clamp-4 leading-relaxed text-secondary"
                       >
                         {overview}
                       </motion.p>
@@ -149,7 +149,7 @@ export const Movie = ({
                   whileTap={{ scale: 0.95 }}
                   className="w-full cursor-pointer"
                 >
-                  <button className="w-full bg-secondary text-text rounded-2xl p-1 mt-2">
+                  <button className="w-full bg-secondary text-text rounded-2xl p-1 mt-1 text-sm">
                     <Link to={`/${type}/${id}`}>View Details</Link>
                   </button>
                 </motion.div>
