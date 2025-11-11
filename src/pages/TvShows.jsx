@@ -70,9 +70,9 @@ export const TvShows = () => {
         ]
 
   return (
-    <div className='movies-filter'>
+    <div className='movies-filter mt-20'>
         <Nav />
-        <h2>
+        <h2 className='text-center'>
           Tv shows
         </h2>
         <FilterComponent genres={tvGenres} mediaType='tv' />

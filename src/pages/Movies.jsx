@@ -83,10 +83,10 @@ export const Movies = () => {
 
 
   return (
-    <div className='movies-filter'>
+    <div className='movies-filter mt-20'>
       <Nav />
-      <h2>Movies</h2>
-      < FilterComponent genres={genres} mediaType='movie'/>
+      <h2 className='text-center'>Movies</h2>
+      <FilterComponent genres={genres} mediaType='movie'/>
     </div>
   )
 }

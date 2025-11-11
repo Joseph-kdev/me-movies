@@ -47,13 +47,13 @@ export const Nav = () => {
         </div>
         <ul className={`navbar-menu ${isOpen ? "open" : ""}`}>
           <li className="navbar-item">
-            <Link to="/search" className="navbar-link">
-              Search
+            <Link to="/home" className="navbar-link">
+              Home
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to="/home" className="navbar-link">
-              Home
+            <Link to="/search" className="navbar-link">
+              Search
             </Link>
           </li>
           <li className="navbar-item">

@@ -20,26 +20,6 @@ export const Movie = ({
   const mobileRef = useRef(null)
 
   useOnClickOutside(mobileRef, () => setOpen(false))
-  const ref = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        ref.current.dataset.inView = "true";
-      }
-    });
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, []);
-
   const shouldPositionLeft = (index) => {
     const screenWidth = window.innerWidth;
     let cols = 2;
