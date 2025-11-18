@@ -328,7 +328,7 @@ export const MovieInfo = () => {
                   alt={movie?.title}
                   className="w-48 h-72 object-cover rounded-lg"
                 />
-                <div className="absolute top-1">
+                <div className="absolute top-2 left-2">
                   <button>
                     {movieInCollections.favorites ? (
                       <div
@@ -514,7 +514,7 @@ export const MovieInfo = () => {
                   ))}
                 </div>
 
-                <p className="text-[#e8ffde] leading-relaxed mb-6">
+                <p className="text-[#e8ffde] leading-relaxed w-[96%] mb-6 text-sm">
                   {movie?.overview}
                 </p>
 

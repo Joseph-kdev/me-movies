@@ -2,16 +2,11 @@
     height: 100vh;
 }
 .search-head {
-    padding-top: 16vh;
     text-align: center;
     font-family: 'rubik gemstones';
     color: var(--accent);
     font-size: 3rem;
     margin-bottom: 1vh;
-}
-.search-bar {
-    height: 6vh;
-    display: flex;
 }
 form {
     width: 100%;
@@ -19,27 +14,8 @@ form {
     align-items: center;
     justify-content: center;
 }
-.search-box {
-    width: 80%;
-    height: 30px;
-    padding-left: 2rem;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    border: solid white;
-}
-
-.search-container hr {
-    margin: 1vh 12px;
-}
-.search-heading {
-    color: var(--text);
-}
 .search-heading, .search-holding {
-    margin: 2vh 20px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'poppins';
     font-weight: 400;
 }
