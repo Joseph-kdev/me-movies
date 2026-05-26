@@ -2,14 +2,14 @@
     padding-top: 12vh;
     font-family: 'tilt neon';
     color: var(--text);
-    margin: 1vh 16px;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
 }
 .tab {
     margin: 1vh 4px;
 }
 .tab-heading {
-    background-color: var(--primary);
+    background-color: var(--color-secondary);
     margin: 2vh 0;
     color: var(--text);
     font-family: 'source sans 3';

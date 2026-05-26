@@ -1,10 +1,11 @@
 # Me-Movies
 
 [Live Demo Here](https://me-movies.pages.dev/)
+[Android App](https://github.com/Joseph-kdev/me-movies-mobile/releases/tag/v1.0.0-beta)
 
 ## Preview
 
-![preview](./preview/me2.png)
+![preview](./preview/me-movies.jpg)
 
 ## Description
 
