@@ -58,7 +58,7 @@ export const Nav = () => {
           </li>
           <li className="navbar-item">
             <Link to="/collections" className="navbar-link">
-              Your Catalogue
+              Library
             </Link>
           </li>
           <li className="navbar-item">

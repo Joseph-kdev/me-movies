@@ -21,6 +21,7 @@ hr {
     width: 12vw;
     margin-top: 2vh;
     margin-bottom: 4vh;
+    border-radius: 8px;
 }
 .more-button {
     text-decoration: none;
@@ -29,4 +30,27 @@ hr {
     flex-direction: column;
     align-items: center;
     border-radius: 16px;
+}
+.movie-carousel{
+    position: relative;
+}
+.download-button {
+    background-color: var(--accent);
+    position: absolute;
+    right: 20px;
+    bottom: 56px;
+    z-index: 90;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.download-button p {
+    color: var(--color-secondary);
+    font-family: "tilt neon";
+    font-size: small;
+}
+ion-icon {
+    color: var(--primary);
 }
