@@ -144,7 +144,7 @@ export const Movie = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 backdrop-blur flex justify-center items-center z-20"
+          className="fixed inset-0 backdrop-blur flex justify-center items-center z-40"
         >
           <div
             className="relative max-w-sm mx-auto bg-cover bg-center bg-no-repeat max-h-[600px] rounded-md"
@@ -176,7 +176,7 @@ export const Movie = ({
               className="relative z-20 min-h-[248px] text-text mt-[300px] p-2"
             >
               <div>
-                <h2 className="font-semibold leading-tight text-text">
+                <h2 className="font-bold leading-tight text-text text-lg">
                   {title}
                 </h2>
               </div>
@@ -185,7 +185,7 @@ export const Movie = ({
                 animate={{ opacity: 1, filter: "blur(0px)" }}
                 exit={{ opacity: 0, filter: "blur(4px)" }}
                 transition={{ delay: 0.1 }}
-                className="line-clamp-6 text-sm leading-relaxed text-text my-2"
+                className="line-clamp-4 text-sm leading-relaxed text-text my-2"
               >
                 {overview}
               </motion.p>

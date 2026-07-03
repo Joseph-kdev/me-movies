@@ -73,8 +73,7 @@ const Home = () => {
           </div>
         )}
         <button className="movie-button">
-          <Link to="/movies" className="more-button">
-            More
+          <Link to="/movies" className="more-button py-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -107,8 +106,7 @@ const Home = () => {
           </div>
         )}
         <button className="movie-button">
-          <Link to="/tvshows" className="more-button">
-            More
+          <Link to="/tvshows" className="more-button py-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

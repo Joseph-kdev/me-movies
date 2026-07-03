@@ -1,7 +1,7 @@
-import React from 'react'
 import './stylesheets/footer.css'
 
 export const Footer = () => {
+    const year = new Date().getFullYear()
   return (
     <div className='footer'>
         <div className='footer-logo'>
@@ -36,7 +36,7 @@ export const Footer = () => {
         </div>
         <div className='footer-right'>
             <p>
-                © 2024 Me-Movies with 💙
+                © {year} Me-Movies with 💙
             </p>
         </div>
     </div>

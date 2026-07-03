@@ -116,43 +116,48 @@ export default function OtherMovieList({ movieResults }) {
                             layoutId={`movie-title-${movie.id}`}
                             className="font-semibold leading-tight text-background text-sm"
                           >
-                            {movie.title}
+                            {movie.title || movie.name}
                           </motion.h3>
                           <motion.p
                             initial={{ opacity: 0, filter: "blur(4px)" }}
                             animate={{ opacity: 1, filter: "blur(0px)" }}
                             exit={{ opacity: 0, filter: "blur(4px)" }}
                             transition={{ delay: 0.1 }}
-                            className="text-xs line-clamp-4 leading-relaxed text-secondary"
+                            className="text-xs line-clamp-3 leading-relaxed text-secondary"
                           >
-                            {movie.overview}
+                            {movie.overview.slice(0,200)}
                           </motion.p>
                           <div className="flex items-center justify-between text-sm">
                             <span className="text-primary">
-                              {new Date(movie.release_date).getFullYear()}
+                              {new Date(
+                                movie.release_date || movie.first_air_date,
+                              ).getFullYear()}
                             </span>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <motion.div
-                      initial={{ scale: 0.9, opacity: 0 }}
-                      animate={{ scale: 1, opacity: 1 }}
-                      exit={{ scale: 0.9, opacity: 0 }}
-                      transition={{ delay: 0.2 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="w-full cursor-pointer"
+                    <Link
+                      to={`/${movie.type || (movie.name ? "tv" : "movie")}/${
+                        movie.id
+                      }`}
                     >
-                      <button className="w-full bg-secondary text-text rounded-2xl p-1 mt-1 text-sm">
-                        <Link
-                          to={`/${
-                            movie.type || (movie.name ? "tv" : "movie")
-                          }/${movie.id}`}
+                      <motion.div
+                        initial={{ scale: 0.9, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        exit={{ scale: 0.9, opacity: 0 }}
+                        transition={{ delay: 0.2 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="w-full cursor-pointer"
+                      >
+                        <button
+                          className="w-full bg-secondary text-text rounded-2xl p-1 mt-1 text-sm"
+                          onClick={() => {}}
                         >
                           View Details
-                        </Link>
-                      </button>
-                    </motion.div>
+                        </button>
+                      </motion.div>
+                    </Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -166,10 +171,10 @@ export default function OtherMovieList({ movieResults }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 backdrop-blur flex justify-center items-center z-20"
+          className="fixed inset-0 backdrop-blur flex justify-center items-center z-40"
         >
           <div
-            className="relative max-w-sm mx-auto bg-cover bg-center bg-no-repeat max-h-[600px] rounded-md"
+            className="relative max-w-sm mx-auto bg-cover bg-center bg-no-repeat max-h-[560px] rounded-md"
             style={{
               backgroundImage: selectedMovie.poster_path
                 ? `url(https://image.tmdb.org/t/p/w500${selectedMovie.poster_path})`
@@ -197,44 +202,41 @@ export default function OtherMovieList({ movieResults }) {
             </motion.div>
 
             <div className="relative z-20 min-h-[248px] text-text mt-[300px] p-2">
-              <div>
-                <h2 className="font-semibold leading-tight text-text">
+                <h3 className="font-bold leading-tight text-text text-lg">
                   {selectedMovie.title ?? selectedMovie.name}
-                </h2>
-              </div>
+                </h3>
               <motion.p
                 initial={{ opacity: 0, filter: "blur(4px)" }}
                 animate={{ opacity: 1, filter: "blur(0px)" }}
                 exit={{ opacity: 0, filter: "blur(4px)" }}
                 transition={{ delay: 0.1 }}
-                className="line-clamp-6 text-sm leading-relaxed text-text my-2"
+                className="line-clamp-4 text-sm leading-relaxed text-text my-2"
               >
                 {selectedMovie.overview}
               </motion.p>
               <p className="text-sm text-gray-400">
                 {new Date(
-                  selectedMovie.release_date ?? selectedMovie.first_air_date
+                  selectedMovie.release_date ?? selectedMovie.first_air_date,
                 ).getFullYear()}
               </p>
-              <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                transition={{ delay: 0.2 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full cursor-pointer text-background absolute bottom-3 left-0 mt-1 p-1"
+              <Link
+                to={`/${
+                  selectedMovie.type || (selectedMovie.name ? "tv" : "movie")
+                }/${selectedMovie.id}`}
               >
-                <button className="w-full bg-accent rounded-2xl p-1">
-                  <Link
-                    to={`/${
-                      selectedMovie.type ||
-                      (selectedMovie.name ? "tv" : "movie")
-                    }/${selectedMovie.id}`}
-                  >
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.9, opacity: 0 }}
+                  transition={{ delay: 0.2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full cursor-pointer text-background absolute bottom-3 left-0 mt-1 p-1"
+                >
+                  <button className="w-full bg-accent rounded-2xl p-1">
                     View Details
-                  </Link>
-                </button>
-              </motion.div>
+                  </button>
+                </motion.div>
+              </Link>
             </div>
           </div>
         </motion.div>
