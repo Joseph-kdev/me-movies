@@ -17,9 +17,9 @@ export const Movie = ({
 }) => {
   const [open, setOpen] = useState(false);
   const [hoveredMovie, setHoveredMovie] = useState(null);
-  const mobileRef = useRef(null)
+  const mobileRef = useRef(null);
 
-  useOnClickOutside(mobileRef, () => setOpen(false))
+  useOnClickOutside(mobileRef, () => setOpen(false));
   const shouldPositionLeft = (index) => {
     const screenWidth = window.innerWidth;
     let cols = 2;
@@ -67,7 +67,7 @@ export const Movie = ({
             {hoveredMovie === id && (
               <motion.div
                 initial={{ opacity: 0, width: "300px" }}
-                animate={{ opacity: 1, width: "300px"}}
+                animate={{ opacity: 1, width: "300px" }}
                 exit={{ opacity: 0, width: "300px" }}
                 transition={{ duration: 0.3 }}
                 className={`absolute top-0 z-20 rounded-lg bg-accent/90 shadow-2xl hidden lg:block p-3 ${
@@ -121,18 +121,20 @@ export const Movie = ({
                     </div>
                   </div>
                 </div>
-                <motion.div
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  exit={{ scale: 0.9, opacity: 0 }}
-                  transition={{ delay: 0.2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full cursor-pointer"
-                >
-                  <button className="w-full bg-secondary text-text rounded-2xl p-1 mt-1 text-sm">
-                    <Link to={`/${type}/${id}`}>View Details</Link>
-                  </button>
-                </motion.div>
+                <Link to={`/${type}/${id}`} className="cursor-pointer">
+                  <motion.div
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.9, opacity: 0 }}
+                    transition={{ delay: 0.2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="w-full"
+                  >
+                    <button className="w-full bg-secondary text-text rounded-2xl p-1 mt-1 text-sm">
+                      View Details
+                    </button>
+                  </motion.div>
+                </Link>
               </motion.div>
             )}
           </AnimatePresence>
@@ -172,9 +174,7 @@ export const Movie = ({
               <p className="text-yellow-400">{vote_average.toFixed(1)}</p>
             </motion.div>
 
-            <div
-              className="relative z-20 min-h-[248px] text-text mt-[300px] p-2"
-            >
+            <div className="relative z-20 min-h-[248px] text-text mt-[300px] p-2">
               <div>
                 <h2 className="font-bold leading-tight text-text text-lg">
                   {title}
@@ -192,18 +192,20 @@ export const Movie = ({
               <p className="text-sm text-gray-400">
                 {new Date(release_date).getFullYear()}
               </p>
-              <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                transition={{ delay: 0.2 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full cursor-pointer text-background absolute bottom-3 left-0 mt-1 p-1"
-              >
-                <button className="w-full bg-accent rounded-2xl p-1">
-                  <Link to={`/${type}/${id}`}>View Details</Link>
-                </button>
-              </motion.div>
+              <Link to={`/${type}/${id}`}>
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.9, opacity: 0 }}
+                  transition={{ delay: 0.2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full text-background absolute bottom-3 left-0 mt-1 p-1"
+                >
+                  <button className="w-full bg-accent rounded-2xl p-1">
+                    View Details
+                  </button>
+                </motion.div>
+              </Link>
             </div>
           </div>
         </motion.div>
