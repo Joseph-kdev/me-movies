@@ -39,7 +39,7 @@ hr {
     position: absolute;
     right: 20px;
     bottom: 56px;
-    z-index: 90;
+    z-index: 30;
     padding: 8px;
     display: flex;
     gap: 8px;

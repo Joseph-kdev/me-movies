@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./stylesheets/nav.css";
 import { auth } from "../config/firebase-config";
 import { Bounce, toast } from "react-toastify";
@@ -35,7 +35,7 @@ export const Nav = () => {
     <nav className="navbar">
       <div className="navbar-wrapper">
         <a href="/home" className="logo">
-          <img src="/images/Me Movies.svg" alt="logo" />
+          <img src="/images/Me Movies.svg" alt="logo" className="rounded-lg" />
         </a>
         <div
           className={`hamburger-icon ${isOpen ? "open" : ""}`}
@@ -47,34 +47,34 @@ export const Nav = () => {
         </div>
         <ul className={`navbar-menu ${isOpen ? "open" : ""}`}>
           <li className="navbar-item">
-            <Link to="/home" className="navbar-link">
+            <NavLink to="/home" className="navbar-link">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <Link to="/search" className="navbar-link">
+            <NavLink to="/search" className="navbar-link">
               Search
-            </Link>
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <Link to="/collections" className="navbar-link">
+            <NavLink to="/collections" className="navbar-link">
               Library
-            </Link>
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <Link to="/movies" className="navbar-link">
+            <NavLink to="/movies" className="navbar-link">
               Movies
-            </Link>
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <Link to="/tvshows" className="navbar-link">
+            <NavLink to="/tvshows" className="navbar-link">
               TV shows
-            </Link>
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <Link to="/login" className="navbar-link" onClick={logout}>
+            <NavLink to="/login" className="navbar-link" onClick={logout}>
               {user ? "Sign Out" : "Login"}
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

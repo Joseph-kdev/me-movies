@@ -506,7 +506,7 @@ export const MovieInfo = () => {
                 <div className="flex flex-wrap gap-2 mb-4">
                   {movie?.genres.slice(0, 3).map((genre) => (
                     <div
-                      className="wavy-fade px-2 py-1 rounded-2xl text-xs bg-secondary"
+                      className="wavy-fade px-2 py-1 rounded-2xl text-xs bg-secondary text-text/50"
                       key={genre.id}
                     >
                       {genre.name}
@@ -514,11 +514,11 @@ export const MovieInfo = () => {
                   ))}
                 </div>
 
-                <p className="text-[#e8ffde] leading-relaxed w-[96%] mb-6 text-sm">
+                <p className="text-[#a7b6a1] leading-relaxed w-[96%] mb-6 text-sm">
                   {movie?.overview}
                 </p>
 
-                <div className="flex items-center gap-6 text-sm text-[#a7b6a1]">
+                <div className="flex items-center gap-6 text-sm text-[#a7b6a1b3]">
                   <div className="flex items-center gap-1">
                     <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                     <span className="font-semibold">{movie?.vote_average}</span>
@@ -576,7 +576,7 @@ export const MovieInfo = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <p className="text-xs text-[#ffbef7] max-w-[70px] md:max-w-20 truncate">
+                    <p className="text-xs text-[#b4b4b490] max-w-[70px] md:max-w-20 truncate">
                       {actor.name}
                     </p>
                   </div>
